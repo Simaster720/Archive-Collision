@@ -1,0 +1,32 @@
+{
+  "name": "archive-collision",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "data": "node scripts/build-data.mjs",
+    "upload": "node --env-file=.env.local scripts/upload-cloudinary.mjs",
+    "dev": "next dev",
+    "prebuild": "node scripts/build-data.mjs",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "next": "16.2.9",
+    "next-cloudinary": "^6.17.5",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "cloudinary": "^2.10.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.9",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

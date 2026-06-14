@@ -1,0 +1,5120 @@
+{
+  "collection": {
+    "code": "C",
+    "name": "신수찬 컬렉션"
+  },
+  "totals": {
+    "files": 198,
+    "series": 3,
+    "subseries": 19
+  },
+  "series": [
+    {
+      "code": "S1",
+      "name": "수업",
+      "fileCount": 110,
+      "subseriesCount": 13,
+      "subseries": [
+        {
+          "code": "SS1",
+          "name": "SS1",
+          "fileCount": 5,
+          "files": [
+            {
+              "id": "S1_SS1_01",
+              "fileName": "S1_SS1_01.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "기말 과제 1차 점검 드로잉",
+              "date": "2024-11-23 19:54:00",
+              "content": "기말 과제 기획안에 들어간 전시 설치 드로잉이다. 1학기였던 당시, 미디어아트에서 관객의 인터렉션에 대해 회의감을 갖고 있었기에, 이를 기계적으로 반복만 하는 작업을 계획했었다.",
+              "meta": {
+                "전자여부": null,
+                "형태": "드로잉",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS1/S1_SS1_01",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS1_02",
+              "fileName": "S1_SS1_02.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "기말 과제 2차 점검 드로잉",
+              "date": "2024-12-04 17:06:00",
+              "content": "기말 과제 기획안에 들어간 전시 설치 드로잉이다. 여러 피드백을 받으면서 기존 구매한 의수를 바탕으로 새롭게 기획하였다. 내가 갖고 있는 '자아'에 대한 이야기를 풀어보고자 하였다.",
+              "meta": {
+                "전자여부": null,
+                "형태": "드로잉",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS1/S1_SS1_02",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS1_03",
+              "fileName": "S1_SS1_03.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "윤석희 교수님 작업실",
+              "date": "2024-12-12 16:30:00",
+              "content": "기말 과제 제작을 위해서 윤석희 교수님 작업실을 방문하였다. 당시 수업 중 필수로 가는 것이 아니라, 작업에 어려움이 있는 학생들만 따로 시간 내서 방문하였다. 사진은 도착하자마자 촬영한 것이다.",
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS1/S1_SS1_03",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS1_04",
+              "fileName": "S1_SS1_04.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "윤석희 교수님 작업실",
+              "date": "2024-12-12 18:28:00",
+              "content": "윤석희 교수님의 도움으로 완성한 악수하는 의수이다. 현장에서 벽에 어떻게 설치하면 될지까지 알려주셨다.",
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS1/S1_SS1_04",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS1_05",
+              "fileName": "S1_SS1_05.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "작품 전시 이미지",
+              "date": "2024-12-26 21:48:00",
+              "content": "성암관 301호에서 진행한 전시 결과물이다.  제목은 <지극히 개인적인 이야기>이다. 다양한 사람들과 관계 맺고 있는 내가 사람들마다 다른 자아를 갖고 악수한다는 내용의 지극히 개인적인 내용을 담고 있는 작업이다.",
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS1/S1_SS1_05",
+                "ext": "png"
+              },
+              "ai": null
+            }
+          ]
+        },
+        {
+          "code": "SS2",
+          "name": "SS2",
+          "fileCount": 6,
+          "files": [
+            {
+              "id": "S1_SS2_01",
+              "fileName": "S1_SS2_01.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "서비스 웹 디자인",
+              "date": "2025-04-29 09:12:00",
+              "content": "미디어아트 템플릿 서비스 'Lightly' 웹사이트 디자인이다. 웹 디자인을 진행해 본 경험이 없어서, 포토샵으로 제작을 했었다.",
+              "meta": {
+                "전자여부": null,
+                "형태": "PC 캡쳐",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS2/S1_SS2_01",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS2_02",
+              "fileName": "S1_SS2_02.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "서비스 웹 디자인",
+              "date": "2025-05-07 03:05:00",
+              "content": "1주일 전에 피드백을 받고, 조금 더 웹사이트의 형식대로 이미지를 넣어서 완성하였다.",
+              "meta": {
+                "전자여부": null,
+                "형태": "PC 캡쳐",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS2/S1_SS2_02",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS2_03",
+              "fileName": "S1_SS2_03.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "서비스 웹 디자인",
+              "date": "2025-05-13 03:36:00",
+              "content": "피드백을 바탕으로 다시 제작하였다. 해외의 템플릿 사이트를 참고해서, 처음 화면에 약간의 맛보기를 할 수 있는 기능을 넣었다.",
+              "meta": {
+                "전자여부": null,
+                "형태": "PC 캡쳐",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS2/S1_SS2_03",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS2_04",
+              "fileName": "S1_SS2_04.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "서비스 웹 디자인",
+              "date": "2025-05-27 09:21:00",
+              "content": "지금까지 제작한 이미지는 전문성이 떨어지고 가벼워 보인다는 피드백을 받아서, 키 컬러를 변경하였다. 어두운 환경에서 빛의 색감이 튀도록 디자인을 변경하였다.",
+              "meta": {
+                "전자여부": null,
+                "형태": "PC 캡쳐",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS2/S1_SS2_04",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS2_05",
+              "fileName": "S1_SS2_05.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "서비스 웹 디자인",
+              "date": "2025-06-17 08:30:00",
+              "content": "최종 웹사이트 이미지이다. 해당 페이지를 제외하고도 20페이지 디자인과 홍보 영상을 만들어서 제출하였다.",
+              "meta": {
+                "전자여부": null,
+                "형태": "PC 캡쳐",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS2/S1_SS2_05",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS2_06",
+              "fileName": "S1_SS2_06.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "자기소개 이미지 과제",
+              "date": "2025-04-15 00:00:00",
+              "content": "2주차에 진행한 자기소개 자료이다. 당시 작가를 꿈꾸는 미래지향적인 단어로 '작갈'을 선택하여 소개를 진행했었다.",
+              "meta": {
+                "전자여부": null,
+                "형태": "PC 캡쳐",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS2/S1_SS2_06",
+                "ext": "png"
+              },
+              "ai": null
+            }
+          ]
+        },
+        {
+          "code": "SS3",
+          "name": "SS3",
+          "fileCount": 3,
+          "files": [
+            {
+              "id": "S1_SS3_01",
+              "fileName": "S1_SS3_01.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "기말 소논문 기획 메모",
+              "date": "1905-07-17 02:52:48",
+              "content": "기말 소논문을 작성을 위해 목차를 메모한 것이다. 당시 프로포절 목차 중 하나를 구체화하여 소논문의 형태로 발전시키고자 하였다.",
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS3/S1_SS3_01",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS3_02",
+              "fileName": "S1_SS3_02.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "기말 소논문",
+              "date": "1905-07-17 02:52:48",
+              "content": "학기말 소논문이며, 미디어 파사드에서 상호작용이 어떻게 변화하고 있는지에 집중하여 글을 작성하였다. 당시 제출하고 이제서야 글을 다시 보는데, 제목부터 글을 쓰다 말았다는 사실을 깨닫게 되었다.",
+              "meta": {
+                "전자여부": null,
+                "형태": "문서",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS3/S1_SS3_02",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS3_03",
+              "fileName": "S1_SS3_03.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "수업 뒷풀이 현장",
+              "date": "2025-12-15 14:59:00",
+              "content": "마지막 수업 진행 후, 신촌 근처 카페에서 다같이 티타임을 가졌다. 이현진 교수님과 이번 학기 논문 심사에 관한 이야기, 다음 학기 수업에 관한 이야기 등을 나눴었다.",
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS3/S1_SS3_03",
+                "ext": "jpg"
+              },
+              "ai": null
+            }
+          ]
+        },
+        {
+          "code": "SS4",
+          "name": "SS4",
+          "fileCount": 2,
+          "files": [
+            {
+              "id": "S1_SS4_01",
+              "fileName": "S1_SS4_01.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS4",
+                "name": "SS4"
+              },
+              "title": "발제 PPT",
+              "date": "2024.10.",
+              "content": "클레어 비숍의 '디지털 분할' 발제를 맡았었는데, 당시 발제의 형식에 대해 전혀 알지 못 했어서, 모든 사람들 앞에서 PT 하듯이 발제를 진행하였다. 해당 이미지는 '디지털 용어에 대해 아시나요?'라고 질문을하며 발제를 시작했던, PPT 자료의 일부이다.",
+              "meta": {
+                "전자여부": null,
+                "형태": "PC 캡쳐",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS4/S1_SS4_01",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS4_02",
+              "fileName": "S1_SS4_02.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS4",
+                "name": "SS4"
+              },
+              "title": "기말 소논문",
+              "date": "2026-06-14 03:40:08",
+              "content": "입학했을 당시, 미디어파사드가 미디어 아트의 전부라고 생각했었다. 이 두 용어의 혼재로 인하여 많은 대중들이 그렇게 생각하고 있을 것이라 믿었던 나는, 이를 비판하는 내용의 글을 작성했었다.",
+              "meta": {
+                "전자여부": null,
+                "형태": "문서",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS4/S1_SS4_02",
+                "ext": "png"
+              },
+              "ai": null
+            }
+          ]
+        },
+        {
+          "code": "SS5",
+          "name": "SS5",
+          "fileCount": 6,
+          "files": [
+            {
+              "id": "S1_SS5_01",
+              "fileName": "S1_SS5_01.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS5",
+                "name": "SS5"
+              },
+              "title": "발제 이미지 자료",
+              "date": "2025-10-27 23:44:36",
+              "content": "이현진 교수님의 글 '평행한 세계들을 껴안기' 발제를 맡으며, 제작했던 시각 이미지이다.",
+              "meta": {
+                "전자여부": null,
+                "형태": "PC 캡쳐",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS5/S1_SS5_01",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS5_02",
+              "fileName": "S1_SS5_02.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS5",
+                "name": "SS5"
+              },
+              "title": "기말 소논문 기획 메모",
+              "date": "2026-05-01 00:00:00",
+              "content": "학기 말 논문 기획을 위한",
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS5/S1_SS5_02",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS5_03",
+              "fileName": "S1_SS5_03.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS5",
+                "name": "SS5"
+              },
+              "title": "기말 소논문 기획 메모",
+              "date": "2026-05-01 00:00:00",
+              "content": "학기 말 논문 기획을 위한",
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS5/S1_SS5_03",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS5_04",
+              "fileName": "S1_SS5_04.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS5",
+                "name": "SS5"
+              },
+              "title": "기말 소논문 기획서",
+              "date": "2026-11-11 00:00:00",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "문서",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS5/S1_SS5_04",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS5_05",
+              "fileName": "S1_SS5_05.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS5",
+                "name": "SS5"
+              },
+              "title": "중간 과제 레포트",
+              "date": "2026-06-14 03:11:06",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "문서",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS5/S1_SS5_05",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS5_06",
+              "fileName": "S1_SS5_06.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS5",
+                "name": "SS5"
+              },
+              "title": "기말 소논문",
+              "date": "2026-12-26 00:00:00",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "문서",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS5/S1_SS5_06",
+                "ext": "png"
+              },
+              "ai": null
+            }
+          ]
+        },
+        {
+          "code": "SS6",
+          "name": "SS6",
+          "fileCount": 7,
+          "files": [
+            {
+              "id": "S1_SS6_01",
+              "fileName": "S1_SS6_01.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS6",
+                "name": "SS6"
+              },
+              "title": "수업 현장",
+              "date": "2026-03-10 11:11:10",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS6/S1_SS6_01",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS6_02",
+              "fileName": "S1_SS6_02.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS6",
+                "name": "SS6"
+              },
+              "title": "리움 미술관 아카이브",
+              "date": "2026-05-12 15:17:22",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS6/S1_SS6_02",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS6_03",
+              "fileName": "S1_SS6_03.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS6",
+                "name": "SS6"
+              },
+              "title": "전시 배치도 이미지",
+              "date": "2026-05-18 20:36:42",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "PC 캡쳐",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS6/S1_SS6_03",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS6_04",
+              "fileName": "S1_SS6_04.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS6",
+                "name": "SS6"
+              },
+              "title": "전시 배치도 이미지",
+              "date": "2026-05-26 18:02:22",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "PC 캡쳐",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS6/S1_SS6_04",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS6_05",
+              "fileName": "S1_SS6_05.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS6",
+                "name": "SS6"
+              },
+              "title": "<아카이브 충동> 예상 이미지",
+              "date": "2026-06-07 15:25:22",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "PC 캡쳐",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS6/S1_SS6_05",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS6_06",
+              "fileName": "S1_SS6_06.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS6",
+                "name": "SS6"
+              },
+              "title": "전시 X배너",
+              "date": "2026-06-12 16:54:18",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS6/S1_SS6_06",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS6_07",
+              "fileName": "S1_SS6_07.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS6",
+                "name": "SS6"
+              },
+              "title": "AI 탐지 알고리즘 지시문",
+              "date": "2026-06-14 02:14:42",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "PC 캡쳐",
+                "생산자": "박진혁"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS6/S1_SS6_07",
+                "ext": "png"
+              },
+              "ai": null
+            }
+          ]
+        },
+        {
+          "code": "SS7",
+          "name": "SS7",
+          "fileCount": 12,
+          "files": [
+            {
+              "id": "S1_SS7_01",
+              "fileName": "S1_SS7_01.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS7",
+                "name": "SS7"
+              },
+              "title": "기말 작업 시현 이미지",
+              "date": "2025-11-06 02:36:34",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "디지털 이미지",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS7/S1_SS7_01",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS7_02",
+              "fileName": "S1_SS7_02.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS7",
+                "name": "SS7"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2025-12-05 11:19:46",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS7/S1_SS7_02",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS7_03",
+              "fileName": "S1_SS7_03.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS7",
+                "name": "SS7"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2025-12-10 03:54:34",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS7/S1_SS7_03",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS7_04",
+              "fileName": "S1_SS7_04.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS7",
+                "name": "SS7"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2025-12-10 17:08:08",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS7/S1_SS7_04",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS7_05",
+              "fileName": "S1_SS7_05.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS7",
+                "name": "SS7"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2025-12-10 17:51:08",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS7/S1_SS7_05",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS7_06",
+              "fileName": "S1_SS7_06.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS7",
+                "name": "SS7"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2025-12-11 02:53:48",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS7/S1_SS7_06",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS7_07",
+              "fileName": "S1_SS7_07.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS7",
+                "name": "SS7"
+              },
+              "title": "기말 전시 이미지",
+              "date": "2025-12-11 14:54:14",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS7/S1_SS7_07",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS7_08",
+              "fileName": "S1_SS7_08.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS7",
+                "name": "SS7"
+              },
+              "title": "기말 전시 이미지",
+              "date": "2025-12-11 15:38:40",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS7/S1_SS7_08",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS7_09",
+              "fileName": "S1_SS7_09.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS7",
+                "name": "SS7"
+              },
+              "title": "기말 전시 이미지",
+              "date": "2025-12-11 15:38:54",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS7/S1_SS7_09",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS7_10",
+              "fileName": "S1_SS7_10.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS7",
+                "name": "SS7"
+              },
+              "title": "기말 전시 이미지",
+              "date": "2025-12-14 17:40:34",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "미상"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS7/S1_SS7_10",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS7_11",
+              "fileName": "S1_SS7_11.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS7",
+                "name": "SS7"
+              },
+              "title": "작품 철거 후 아카이브 이미지",
+              "date": "2025-12-18 17:04:50",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS7/S1_SS7_11",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS7_12",
+              "fileName": "S1_SS7_12.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS7",
+                "name": "SS7"
+              },
+              "title": "기말 작업 메모",
+              "date": "2026-06-14 02:11:06",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS7/S1_SS7_12",
+                "ext": "jpg"
+              },
+              "ai": null
+            }
+          ]
+        },
+        {
+          "code": "SS8",
+          "name": "SS8",
+          "fileCount": 17,
+          "files": [
+            {
+              "id": "S1_SS8_01",
+              "fileName": "S1_SS8_01.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS8",
+                "name": "SS8"
+              },
+              "title": "발제 서적",
+              "date": "2026-04-07 20:26:52",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS8/S1_SS8_01",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS8_02",
+              "fileName": "S1_SS8_02.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS8",
+                "name": "SS8"
+              },
+              "title": "발제 서적",
+              "date": "2026-04-08 17:33:14",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS8/S1_SS8_02",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS8_03",
+              "fileName": "S1_SS8_03.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS8",
+                "name": "SS8"
+              },
+              "title": "발제 서적",
+              "date": "2026-04-08 17:33:34",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS8/S1_SS8_03",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS8_04",
+              "fileName": "S1_SS8_04.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS8",
+                "name": "SS8"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2026-05-28 00:24:56",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS8/S1_SS8_04",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS8_05",
+              "fileName": "S1_SS8_05.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS8",
+                "name": "SS8"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2026-05-28 01:21:10",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS8/S1_SS8_05",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS8_06",
+              "fileName": "S1_SS8_06.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS8",
+                "name": "SS8"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2026-05-28 03:12:06",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS8/S1_SS8_06",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS8_07",
+              "fileName": "S1_SS8_07.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS8",
+                "name": "SS8"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2026-06-07 12:27:26",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS8/S1_SS8_07",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS8_08",
+              "fileName": "S1_SS8_08.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS8",
+                "name": "SS8"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2026-06-07 16:18:46",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS8/S1_SS8_08",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS8_09",
+              "fileName": "S1_SS8_09.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS8",
+                "name": "SS8"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2026-06-09 16:44:20",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS8/S1_SS8_09",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS8_10",
+              "fileName": "S1_SS8_10.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS8",
+                "name": "SS8"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2026-06-10 04:37:42",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "PC 캡쳐",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS8/S1_SS8_10",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS8_11",
+              "fileName": "S1_SS8_11.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS8",
+                "name": "SS8"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2026-06-10 13:48:04",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS8/S1_SS8_11",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS8_12",
+              "fileName": "S1_SS8_12.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS8",
+                "name": "SS8"
+              },
+              "title": "기말 전시 설치 이미지",
+              "date": "2026-06-11 02:07:36",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS8/S1_SS8_12",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS8_13",
+              "fileName": "S1_SS8_13.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS8",
+                "name": "SS8"
+              },
+              "title": "기말 전시 설치 이미지",
+              "date": "2026-06-11 06:43:08",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS8/S1_SS8_13",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS8_14",
+              "fileName": "S1_SS8_14.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS8",
+                "name": "SS8"
+              },
+              "title": "기말 전시 뒷풀이",
+              "date": "2026-06-11 14:49:24",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS8/S1_SS8_14",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS8_15",
+              "fileName": "S1_SS8_15.jpg",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS8",
+                "name": "SS8"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2026-06-14 00:57:38",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "이승헌"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS8/S1_SS8_15",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS8_16",
+              "fileName": "S1_SS8_16.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS8",
+                "name": "SS8"
+              },
+              "title": "기말 작업 메모",
+              "date": "2026-06-14 02:11:36",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS8/S1_SS8_16",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS8_17",
+              "fileName": "S1_SS8_17.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS8",
+                "name": "SS8"
+              },
+              "title": "기말 작업 메모",
+              "date": "2026-06-14 02:12:44",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS8/S1_SS8_17",
+                "ext": "jpg"
+              },
+              "ai": null
+            }
+          ]
+        },
+        {
+          "code": "SS9",
+          "name": "SS9",
+          "fileCount": 3,
+          "files": [
+            {
+              "id": "S1_SS9_01",
+              "fileName": "S1_SS9_01.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS9",
+                "name": "SS9"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2024-12-07 23:40:02",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "AI 생성",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS9/S1_SS9_01",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS9_02",
+              "fileName": "S1_SS9_02.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS9",
+                "name": "SS9"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2024-12-08 17:58:50",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "AI 생성",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS9/S1_SS9_02",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS9_03",
+              "fileName": "S1_SS9_03.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS9",
+                "name": "SS9"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2024-12-10 04:57:28",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "AI 생성",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS9/S1_SS9_03",
+                "ext": "png"
+              },
+              "ai": null
+            }
+          ]
+        },
+        {
+          "code": "SS10",
+          "name": "SS10",
+          "fileCount": 4,
+          "files": [
+            {
+              "id": "S1_SS10_01",
+              "fileName": "S1_SS10_01.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS10",
+                "name": "SS10"
+              },
+              "title": "기말 소논문",
+              "date": "2026-06-14 03:10:02",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "PC 캡쳐",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS10/S1_SS10_01",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS10_02",
+              "fileName": "S1_SS10_02.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS10",
+                "name": "SS10"
+              },
+              "title": "발제 자료",
+              "date": "2026-06-14 03:09:16",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "PC 캡쳐",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS10/S1_SS10_02",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS10_03",
+              "fileName": "S1_SS10_03.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS10",
+                "name": "SS10"
+              },
+              "title": "발제 자료",
+              "date": "2026-06-14 03:08:58",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "PC 캡쳐",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS10/S1_SS10_03",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS10_04",
+              "fileName": "S1_SS10_04.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS10",
+                "name": "SS10"
+              },
+              "title": "발제 자료",
+              "date": "2026-06-14 03:08:48",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "PC 캡쳐",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS10/S1_SS10_04",
+                "ext": "png"
+              },
+              "ai": null
+            }
+          ]
+        },
+        {
+          "code": "SS11",
+          "name": "SS11",
+          "fileCount": 18,
+          "files": [
+            {
+              "id": "S1_SS11_01",
+              "fileName": "S1_SS11_01.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS11",
+                "name": "SS11"
+              },
+              "title": "수업 자료 대출",
+              "date": "2025-05-10 14:44:56",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS11/S1_SS11_01",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS11_02",
+              "fileName": "S1_SS11_02.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS11",
+                "name": "SS11"
+              },
+              "title": "기말 전시 공간",
+              "date": "2025-06-14 16:37:52",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS11/S1_SS11_02",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS11_03",
+              "fileName": "S1_SS11_03.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS11",
+                "name": "SS11"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2025-06-14 17:38:48",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS11/S1_SS11_03",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS11_04",
+              "fileName": "S1_SS11_04.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS11",
+                "name": "SS11"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2025-06-24 13:02:48",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS11/S1_SS11_04",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS11_05",
+              "fileName": "S1_SS11_05.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS11",
+                "name": "SS11"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2025-06-30 03:16:26",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "PC 캡쳐",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS11/S1_SS11_05",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS11_06",
+              "fileName": "S1_SS11_06.jpeg",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS11",
+                "name": "SS11"
+              },
+              "title": "기말 전시 포스터",
+              "date": "2025-07-02 14:46:50",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "디지털 이미지",
+                "생산자": "손샛별"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS11/S1_SS11_06",
+                "ext": "jpeg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS11_07",
+              "fileName": "S1_SS11_07.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS11",
+                "name": "SS11"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2025-07-02 18:06:10",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS11/S1_SS11_07",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS11_08",
+              "fileName": "S1_SS11_08.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS11",
+                "name": "SS11"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2025-07-02 18:16:50",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "미상"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS11/S1_SS11_08",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS11_09",
+              "fileName": "S1_SS11_09.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS11",
+                "name": "SS11"
+              },
+              "title": "기말 전시 공간",
+              "date": "2025-07-02 18:23:00",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS11/S1_SS11_09",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS11_10",
+              "fileName": "S1_SS11_10.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS11",
+                "name": "SS11"
+              },
+              "title": "기말 전시 전경",
+              "date": "2025-07-02 18:44:22",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS11/S1_SS11_10",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS11_11",
+              "fileName": "S1_SS11_11.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS11",
+                "name": "SS11"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2025-07-02 18:53:52",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS11/S1_SS11_11",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS11_12",
+              "fileName": "S1_SS11_12.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS11",
+                "name": "SS11"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2025-07-03 05:00:38",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS11/S1_SS11_12",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS11_13",
+              "fileName": "S1_SS11_13.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS11",
+                "name": "SS11"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2025-07-04 06:05:44",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS11/S1_SS11_13",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS11_14",
+              "fileName": "S1_SS11_14.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS11",
+                "name": "SS11"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2025-07-04 18:06:38",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS11/S1_SS11_14",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS11_15",
+              "fileName": "S1_SS11_15.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS11",
+                "name": "SS11"
+              },
+              "title": "기말 작업 이미지",
+              "date": "2025-07-04 18:06:46",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS11/S1_SS11_15",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS11_16",
+              "fileName": "S1_SS11_16.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS11",
+                "name": "SS11"
+              },
+              "title": "기말 전시 식사",
+              "date": "2025-07-04 18:16:22",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS11/S1_SS11_16",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS11_17",
+              "fileName": "S1_SS11_17.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS11",
+                "name": "SS11"
+              },
+              "title": "기말 전시 캡션",
+              "date": "2025-07-05 15:06:26",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS11/S1_SS11_17",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS11_18",
+              "fileName": "S1_SS11_18.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS11",
+                "name": "SS11"
+              },
+              "title": "기말 전시 식사",
+              "date": "2025-07-06 15:16:50",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS11/S1_SS11_18",
+                "ext": "jpg"
+              },
+              "ai": null
+            }
+          ]
+        },
+        {
+          "code": "SS12",
+          "name": "SS12",
+          "fileCount": 15,
+          "files": [
+            {
+              "id": "S1_SS12_01",
+              "fileName": "S1_SS12_01.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS12",
+                "name": "SS12"
+              },
+              "title": "수업 내용",
+              "date": "2025-10-24 11:54:28",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS12/S1_SS12_01",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS12_02",
+              "fileName": "S1_SS12_02.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS12",
+                "name": "SS12"
+              },
+              "title": "수업 내용",
+              "date": "2025-11-14 12:34:54",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS12/S1_SS12_02",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS12_03",
+              "fileName": "S1_SS12_03.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS12",
+                "name": "SS12"
+              },
+              "title": "기말 작업 과정",
+              "date": "2025-12-17 22:48:00",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS12/S1_SS12_03",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS12_04",
+              "fileName": "S1_SS12_04.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS12",
+                "name": "SS12"
+              },
+              "title": "기말 작업 과정",
+              "date": "2025-12-19 12:56:28",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS12/S1_SS12_04",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS12_05",
+              "fileName": "S1_SS12_05.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS12",
+                "name": "SS12"
+              },
+              "title": "기말 작업 과정",
+              "date": "2025-12-19 22:16:48",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS12/S1_SS12_05",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS12_06",
+              "fileName": "S1_SS12_06.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS12",
+                "name": "SS12"
+              },
+              "title": "기말 작업 과정",
+              "date": "2025-12-20 13:32:44",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS12/S1_SS12_06",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS12_07",
+              "fileName": "S1_SS12_07.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS12",
+                "name": "SS12"
+              },
+              "title": "기말 작업 과정",
+              "date": "2025-12-21 17:50:06",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS12/S1_SS12_07",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS12_08",
+              "fileName": "S1_SS12_08.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS12",
+                "name": "SS12"
+              },
+              "title": "기말 작업 과정",
+              "date": "2025-12-22 20:03:48",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS12/S1_SS12_08",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS12_09",
+              "fileName": "S1_SS12_09.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS12",
+                "name": "SS12"
+              },
+              "title": "기말 작업 과정",
+              "date": "2025-12-23 03:24:20",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS12/S1_SS12_09",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS12_10",
+              "fileName": "S1_SS12_10.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS12",
+                "name": "SS12"
+              },
+              "title": "기말 작업 설치",
+              "date": "2025-12-23 12:39:14",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS12/S1_SS12_10",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS12_11",
+              "fileName": "S1_SS12_11.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS12",
+                "name": "SS12"
+              },
+              "title": "기말 전시 전경",
+              "date": "2025-12-23 13:42:00",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "미상"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS12/S1_SS12_11",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS12_12",
+              "fileName": "S1_SS12_12.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS12",
+                "name": "SS12"
+              },
+              "title": "기말 작업 메모",
+              "date": "2025-12-26 21:36:22",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS12/S1_SS12_12",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS12_13",
+              "fileName": "S1_SS12_13.PNG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS12",
+                "name": "SS12"
+              },
+              "title": "기말 작업 과정",
+              "date": "2025-12-26 22:09:14",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "PC 캡쳐",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS12/S1_SS12_13",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS12_14",
+              "fileName": "S1_SS12_14.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS12",
+                "name": "SS12"
+              },
+              "title": "기말 작업 메모",
+              "date": "2026-06-14 00:50:02",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS12/S1_SS12_14",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS12_15",
+              "fileName": "S1_SS12_15.jpg",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS12",
+                "name": "SS12"
+              },
+              "title": "중간 과제 작업",
+              "date": "2026-06-14 00:57:16",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS12/S1_SS12_15",
+                "ext": "jpg"
+              },
+              "ai": null
+            }
+          ]
+        },
+        {
+          "code": "SS13",
+          "name": "SS13",
+          "fileCount": 12,
+          "files": [
+            {
+              "id": "S1_SS13_01",
+              "fileName": "S1_SS13_01.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS13",
+                "name": "SS13"
+              },
+              "title": "수업 내용",
+              "date": "2025-04-03 02:18:40",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS13/S1_SS13_01",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS13_02",
+              "fileName": "S1_SS13_02.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS13",
+                "name": "SS13"
+              },
+              "title": "수업 내용",
+              "date": "2025-04-03 15:21:44",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS13/S1_SS13_02",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS13_03",
+              "fileName": "S1_SS13_03.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS13",
+                "name": "SS13"
+              },
+              "title": "기말 작업 계획",
+              "date": "2025-04-17 16:30:04",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "드로잉",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS13/S1_SS13_03",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS13_04",
+              "fileName": "S1_SS13_04.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS13",
+                "name": "SS13"
+              },
+              "title": "기말 작업 프로토타입",
+              "date": "2025-04-24 14:29:14",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS13/S1_SS13_04",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS13_05",
+              "fileName": "S1_SS13_05.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS13",
+                "name": "SS13"
+              },
+              "title": "기말 작업 프로토타입",
+              "date": "2025-05-15 02:41:46",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "PC 캡쳐",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS13/S1_SS13_05",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS13_06",
+              "fileName": "S1_SS13_06.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS13",
+                "name": "SS13"
+              },
+              "title": "기말 작업 과정",
+              "date": "2025-05-28 22:02:46",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS13/S1_SS13_06",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS13_07",
+              "fileName": "S1_SS13_07.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS13",
+                "name": "SS13"
+              },
+              "title": "기말 작업 과정",
+              "date": "2025-06-12 04:48:28",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS13/S1_SS13_07",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS13_08",
+              "fileName": "S1_SS13_08.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS13",
+                "name": "SS13"
+              },
+              "title": "기말 전시 설치",
+              "date": "2025-06-12 14:20:06",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS13/S1_SS13_08",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS13_09",
+              "fileName": "S1_SS13_09.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS13",
+                "name": "SS13"
+              },
+              "title": "기말 작업 과정",
+              "date": "2025-06-20 08:57:36",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS13/S1_SS13_09",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS13_10",
+              "fileName": "S1_SS13_10.png",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS13",
+                "name": "SS13"
+              },
+              "title": "기말 작업 과정",
+              "date": "2025-06-20 12:31:02",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "PC 캡쳐",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS13/S1_SS13_10",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS13_11",
+              "fileName": "S1_SS13_11.JPG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS13",
+                "name": "SS13"
+              },
+              "title": "기말 전시 설치",
+              "date": "2025-06-21 13:33:56",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS13/S1_SS13_11",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S1_SS13_12",
+              "fileName": "S1_SS13_12.PNG",
+              "series": {
+                "code": "S1",
+                "name": "수업"
+              },
+              "subseries": {
+                "code": "SS13",
+                "name": "SS13"
+              },
+              "title": "수업 후 추가 전시 기획",
+              "date": "2025-07-06 16:44:32",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "모바일 캡쳐",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S1/SS13/S1_SS13_12",
+                "ext": "png"
+              },
+              "ai": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "S2",
+      "name": "원우회",
+      "fileCount": 37,
+      "subseriesCount": 3,
+      "subseries": [
+        {
+          "code": "SS1",
+          "name": "SS1",
+          "fileCount": 14,
+          "files": [
+            {
+              "id": "S2_SS1_01",
+              "fileName": "S2_SS1_01.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "종강파티 영수증",
+              "date": "2024-12-27 19:23:30",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS1/S2_SS1_01",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS1_02",
+              "fileName": "S2_SS1_02.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "학위수여식 현장",
+              "date": "2025-02-24 09:45:04",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS1/S2_SS1_02",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS1_03",
+              "fileName": "S2_SS1_03.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "학위수여식 현장",
+              "date": "2025-02-24 11:18:12",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS1/S2_SS1_03",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS1_04",
+              "fileName": "S2_SS1_04.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "커피머신 관리",
+              "date": "2025-02-25 19:34:26",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS1/S2_SS1_04",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS1_05",
+              "fileName": "S2_SS1_05.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "개강파티 영수증",
+              "date": "2025-03-13 22:59:44",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS1/S2_SS1_05",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS1_06",
+              "fileName": "S2_SS1_06.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "단체복 배부",
+              "date": "2025-04-03 14:58:34",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS1/S2_SS1_06",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS1_07",
+              "fileName": "S2_SS1_07.jpg",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "단체복 공지",
+              "date": "2025-04-04 15:24:16",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "디지털 이미지",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS1/S2_SS1_07",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS1_08",
+              "fileName": "S2_SS1_08.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "단체복 배부",
+              "date": "2025-04-04 16:00:20",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS1/S2_SS1_08",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS1_09",
+              "fileName": "S2_SS1_09.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "단체복 시안",
+              "date": "2025-04-04 17:04:26",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS1/S2_SS1_09",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS1_10",
+              "fileName": "S2_SS1_10.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "단체복 배부",
+              "date": "2025-04-07 17:18:12",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS1/S2_SS1_10",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS1_11",
+              "fileName": "S2_SS1_11.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "간식사업 배부",
+              "date": "2025-04-21 11:12:36",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "이민영"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS1/S2_SS1_11",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS1_12",
+              "fileName": "S2_SS1_12.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "스승의 날 행사",
+              "date": "2025-05-14 13:09:50",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS1/S2_SS1_12",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS1_13",
+              "fileName": "S2_SS1_13.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "전공대표 업무",
+              "date": "2025-06-05 17:41:02",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS1/S2_SS1_13",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS1_14",
+              "fileName": "S2_SS1_14.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "종강파티 자리",
+              "date": "2025-06-20 00:14:20",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS1/S2_SS1_14",
+                "ext": "jpg"
+              },
+              "ai": null
+            }
+          ]
+        },
+        {
+          "code": "SS2",
+          "name": "SS2",
+          "fileCount": 20,
+          "files": [
+            {
+              "id": "S2_SS2_01",
+              "fileName": "S2_SS2_01.jpg",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "학위수여식 기념품",
+              "date": "2025-08-25 15:56:20",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "디지털 이미지",
+                "생산자": "미상"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS2/S2_SS2_01",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS2_02",
+              "fileName": "S2_SS2_02.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "학위수여식 현장",
+              "date": "2025-08-28 13:47:14",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS2/S2_SS2_02",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS2_03",
+              "fileName": "S2_SS2_03.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "학위수여식 현장",
+              "date": "2025-08-29 12:19:10",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS2/S2_SS2_03",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS2_04",
+              "fileName": "S2_SS2_04.png",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "카드뉴스 제작 메뉴얼",
+              "date": "2025-08-31 17:02:44",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "디지털 이미지",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS2/S2_SS2_04",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS2_05",
+              "fileName": "S2_SS2_05.png",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "신입생환영회 영수증",
+              "date": "2025-09-01 11:17:30",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "디지털 이미지",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS2/S2_SS2_05",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS2_06",
+              "fileName": "S2_SS2_06.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "자판기 철거 공지",
+              "date": "2025-09-11 15:56:56",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS2/S2_SS2_06",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS2_07",
+              "fileName": "S2_SS2_07.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "연고전 뒷풀이",
+              "date": "2025-09-20 18:41:16",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS2/S2_SS2_07",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS2_08",
+              "fileName": "S2_SS2_08.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "연고전 뒷풀이",
+              "date": "2025-09-20 20:37:28",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS2/S2_SS2_08",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS2_09",
+              "fileName": "S2_SS2_09.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "출범식 자료",
+              "date": "2025-09-28 13:31:36",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS2/S2_SS2_09",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS2_10",
+              "fileName": "S2_SS2_10.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "출범식 자료",
+              "date": "2025-09-28 13:37:52",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS2/S2_SS2_10",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS2_11",
+              "fileName": "S2_SS2_11.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "출범식 자료",
+              "date": "2025-09-28 16:42:30",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS2/S2_SS2_11",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS2_12",
+              "fileName": "S2_SS2_12.jpg",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "간식행사 스티커",
+              "date": "2025-10-19 05:46:00",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "디지털 이미지",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS2/S2_SS2_12",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS2_13",
+              "fileName": "S2_SS2_13.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "간식행사 포장",
+              "date": "2025-10-19 20:44:32",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS2/S2_SS2_13",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS2_14",
+              "fileName": "S2_SS2_14.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "간식행사 배부",
+              "date": "2025-10-19 23:27:14",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS2/S2_SS2_14",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS2_15",
+              "fileName": "S2_SS2_15.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "단체복 배부",
+              "date": "2025-12-01 19:07:58",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS2/S2_SS2_15",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS2_16",
+              "fileName": "S2_SS2_16.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "종강파티 자리",
+              "date": "2025-12-19 00:33:48",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS2/S2_SS2_16",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS2_17",
+              "fileName": "S2_SS2_17.jpeg",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "종강총회 준비",
+              "date": "2025-12-19 02:46:54",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "손샛별"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS2/S2_SS2_17",
+                "ext": "jpeg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS2_18",
+              "fileName": "S2_SS2_18.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "커뮤니케이션대학원 원우회장 모임",
+              "date": "2026-01-19 18:54:52",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS2/S2_SS2_18",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS2_19",
+              "fileName": "S2_SS2_19.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "종강총회 메모",
+              "date": "2026-06-14 00:50:40",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS2/S2_SS2_19",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS2_20",
+              "fileName": "S2_SS2_20.jpg",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "출범식 자료",
+              "date": "2026-06-14 00:56:54",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS2/S2_SS2_20",
+                "ext": "jpg"
+              },
+              "ai": null
+            }
+          ]
+        },
+        {
+          "code": "SS3",
+          "name": "SS3",
+          "fileCount": 3,
+          "files": [
+            {
+              "id": "S2_SS3_01",
+              "fileName": "S2_SS3_01.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "출범식 이후 뒷풀이 장면",
+              "date": "2026-03-14 19:32:34",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS3/S2_SS3_01",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS3_02",
+              "fileName": "S2_SS3_02.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "출범식 자료",
+              "date": "2026-03-14 17:25:26",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS3/S2_SS3_02",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S2_SS3_03",
+              "fileName": "S2_SS3_03.JPG",
+              "series": {
+                "code": "S2",
+                "name": "원우회"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "출범식 자료",
+              "date": "2026-03-14 15:55:06",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S2/SS3/S2_SS3_03",
+                "ext": "jpg"
+              },
+              "ai": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "S3",
+      "name": "교내활동",
+      "fileCount": 51,
+      "subseriesCount": 3,
+      "subseries": [
+        {
+          "code": "SS1",
+          "name": "SS1",
+          "fileCount": 9,
+          "files": [
+            {
+              "id": "S3_SS1_01",
+              "fileName": "S3_SS1_01.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "연세대학교 성탄절 행사",
+              "date": "2024-12-02 15:32:10",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS1/S3_SS1_01",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS1_02",
+              "fileName": "S3_SS1_02.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "커뮤니케이션대학원 2022년 기자재 리스트",
+              "date": "2024-12-10 16:19:04",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS1/S3_SS1_02",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS1_03",
+              "fileName": "S3_SS1_03.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "맛나샘 학식당",
+              "date": "2025-03-18 13:34:08",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS1/S3_SS1_03",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS1_04",
+              "fileName": "S3_SS1_04.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "한경관 학식당 포스터",
+              "date": "2025-03-31 12:06:52",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS1/S3_SS1_04",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS1_05",
+              "fileName": "S3_SS1_05.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "연세대학교 홈커밍데이",
+              "date": "2025-05-10 11:24:01",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS1/S3_SS1_05",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS1_06",
+              "fileName": "S3_SS1_06.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "커뮤니케이션대학원 면접 도움 학생 식사",
+              "date": "2025-11-22 12:28:28",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS1/S3_SS1_06",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS1_07",
+              "fileName": "S3_SS1_07.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "미디어아트 전공 졸업전시 포스터",
+              "date": "2025-12-16 09:48:01",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS1/S3_SS1_07",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS1_08",
+              "fileName": "S3_SS1_08.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "신입생 스터디 현장",
+              "date": "2026-01-25 14:23:33",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS1/S3_SS1_08",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS1_09",
+              "fileName": "S3_SS1_09.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS1",
+                "name": "SS1"
+              },
+              "title": "커뮤니케이션대학원 면접 도움 학생 식사",
+              "date": "2026-05-30 11:52:23",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS1/S3_SS1_09",
+                "ext": "jpg"
+              },
+              "ai": null
+            }
+          ]
+        },
+        {
+          "code": "SS2",
+          "name": "SS2",
+          "fileCount": 8,
+          "files": [
+            {
+              "id": "S3_SS2_01",
+              "fileName": "S3_SS2_01.png",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "140주년 미디어파사드 스토리보드",
+              "date": "2025-04-02 20:34:18",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "디지털 이미지",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS2/S3_SS2_01",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS2_02",
+              "fileName": "S3_SS2_02.png",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "140주년 미디어파사드 스토리보드",
+              "date": "2025-04-14 10:55:16",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "AI 생성",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS2/S3_SS2_02",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS2_03",
+              "fileName": "S3_SS2_03.jpg",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "140주년 미디어파사드 스토리보드",
+              "date": "2025-04-19 18:59:26",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "드로잉",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS2/S3_SS2_03",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS2_04",
+              "fileName": "S3_SS2_04.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "140주년 미디어파사드 공지",
+              "date": "2025-04-22 14:54:20",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "디지털 이미지",
+                "생산자": "연세대학교"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS2/S3_SS2_04",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS2_05",
+              "fileName": "S3_SS2_05.png",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "140주년 미디어파사드 작업",
+              "date": "2025-04-28 02:17:32",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "디지털 이미지",
+                "생산자": "송영채"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS2/S3_SS2_05",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS2_06",
+              "fileName": "S3_SS2_06.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "140주년 미디어파사드 워크숍 자료",
+              "date": "2025-04-28 09:31:24",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS2/S3_SS2_06",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS2_07",
+              "fileName": "S3_SS2_07.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "140주년 미디어파사드 투사 테스트",
+              "date": "2025-05-07 20:33:10",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS2/S3_SS2_07",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS2_08",
+              "fileName": "S3_SS2_08.jpg",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS2",
+                "name": "SS2"
+              },
+              "title": "140주년 미디어파사드 투사 테스트",
+              "date": "2026-06-14 00:55:38",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS2/S3_SS2_08",
+                "ext": "jpg"
+              },
+              "ai": null
+            }
+          ]
+        },
+        {
+          "code": "SS3",
+          "name": "SS3",
+          "fileCount": 34,
+          "files": [
+            {
+              "id": "S3_SS3_01",
+              "fileName": "S3_SS3_01.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 회의 현장",
+              "date": "2025-03-05 18:00:35",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_01",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_02",
+              "fileName": "S3_SS3_02.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 회의 현장",
+              "date": "2025-03-17 15:16:38",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_02",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_03",
+              "fileName": "S3_SS3_03.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 준비 현장",
+              "date": "2025-04-03 16:55:17",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_03",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_04",
+              "fileName": "S3_SS3_04.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 준비 현장",
+              "date": "2025-04-07 13:48:16",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_04",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_05",
+              "fileName": "S3_SS3_05.png",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 회의 자료",
+              "date": "2025-04-07 14:38:54",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "디지털 이미지",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_05",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_06",
+              "fileName": "S3_SS3_06.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 준비 현장",
+              "date": "2025-04-07 15:40:32",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_06",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_07",
+              "fileName": "S3_SS3_07.HEIC",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 기부자 굿즈",
+              "date": "2025-04-21 15:44:22",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "정여진, 윤채림"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_07",
+                "ext": "heic"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_08",
+              "fileName": "S3_SS3_08.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 준비 현장",
+              "date": "2025-05-07 14:33:36",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_08",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_09",
+              "fileName": "S3_SS3_09.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 준비 현장",
+              "date": "2025-05-09 16:14:43",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_09",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_10",
+              "fileName": "S3_SS3_10.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 준비 현장",
+              "date": "2025-05-09 16:14:34",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_10",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_11",
+              "fileName": "S3_SS3_11.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 명찰",
+              "date": "2025-05-10 11:09:35",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_11",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_12",
+              "fileName": "S3_SS3_12.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 명찰",
+              "date": "2025-05-10 11:09:30",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_12",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_13",
+              "fileName": "S3_SS3_13.jpg",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 푸드트럭 쿠폰",
+              "date": "2025-05-12 15:18:50",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "디지털 이미지",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_13",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_14",
+              "fileName": "S3_SS3_14.png",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 회의 자료",
+              "date": "2025-05-12 17:11:28",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "디지털 이미지",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_14",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_15",
+              "fileName": "S3_SS3_15.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 홍보물 파손",
+              "date": "2025-05-13 11:27:30",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_15",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_16",
+              "fileName": "S3_SS3_16.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 아카이브 전시 준비 현장",
+              "date": "2025-05-14 13:18:22",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_16",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_17",
+              "fileName": "S3_SS3_17.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 준비 현장",
+              "date": "2025-05-14 15:57:00",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_17",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_18",
+              "fileName": "S3_SS3_18.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 준비 현장",
+              "date": "2025-05-14 18:41:10",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_18",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_19",
+              "fileName": "S3_SS3_19.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 준비 현장",
+              "date": "2025-05-14 20:36:42",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_19",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_20",
+              "fileName": "S3_SS3_20.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 준비 현장",
+              "date": "2025-05-14 21:28:00",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_20",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_21",
+              "fileName": "S3_SS3_21.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 준비 현장",
+              "date": "2025-05-14 23:31:16",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_21",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_22",
+              "fileName": "S3_SS3_22.png",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 회의 자료",
+              "date": "2025-05-15 03:22:06",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "디지털 이미지",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_22",
+                "ext": "png"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_23",
+              "fileName": "S3_SS3_23.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 설치 현장",
+              "date": "2025-05-15 10:58:11",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_23",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_24",
+              "fileName": "S3_SS3_24.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "26주년 행사 설치 현장",
+              "date": "2025-05-15 11:08:15",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_24",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_25",
+              "fileName": "S3_SS3_25.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "27주년 행사 설치 현장",
+              "date": "2025-05-15 16:14:00",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_25",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_26",
+              "fileName": "S3_SS3_26.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 현장",
+              "date": "2025-05-15 19:46:47",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_26",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_27",
+              "fileName": "S3_SS3_27.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 현장",
+              "date": "2025-05-15 19:46:42",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_27",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_28",
+              "fileName": "S3_SS3_28.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 현장",
+              "date": "2025-05-15 19:57:19",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_28",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_29",
+              "fileName": "S3_SS3_29.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 현장",
+              "date": "2025-05-16 12:02:26",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_29",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_30",
+              "fileName": "S3_SS3_30.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 현장",
+              "date": "2025-05-16 12:18:55",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_30",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_31",
+              "fileName": "S3_SS3_31.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 현장",
+              "date": "2025-05-19 13:05:50",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_31",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_32",
+              "fileName": "S3_SS3_32.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 아카이브 전시 연장 공지",
+              "date": "2025-05-19 15:44:06",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_32",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_33",
+              "fileName": "S3_SS3_33.JPG",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 쇼핑백",
+              "date": "2025-05-20 12:56:50",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "사진",
+                "생산자": "신수찬"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_33",
+                "ext": "jpg"
+              },
+              "ai": null
+            },
+            {
+              "id": "S3_SS3_34",
+              "fileName": "S3_SS3_34.png",
+              "series": {
+                "code": "S3",
+                "name": "교내활동"
+              },
+              "subseries": {
+                "code": "SS3",
+                "name": "SS3"
+              },
+              "title": "25주년 행사 밍글링 질문지",
+              "date": "2026-06-14 01:38:02",
+              "content": null,
+              "meta": {
+                "전자여부": null,
+                "형태": "디지털 이미지",
+                "생산자": "황남웅"
+              },
+              "image": {
+                "publicId": "archive-collision/S3/SS3/S3_SS3_34",
+                "ext": "png"
+              },
+              "ai": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
