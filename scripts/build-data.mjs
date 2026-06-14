@@ -1,38 +1,43 @@
-// Build-time data pipeline: data/source/*.xlsx → data/collection.json
+// Build-time data pipeline: Google Sheets → data/collection.json
 //
-// Parses the 3 sheets (시리즈) with SheetJS, derives the series/subseries
-// hierarchy from the registration filename, and emits a nested tree the
-// app consumes for the sidebar / grid / detail views.
+// Reads the 3 tabs (시리즈) of the source spreadsheet via the Sheets API v4
+// (scripts/lib/sheets.mjs), derives the series/subseries hierarchy from the
+// registration filename, and emits a nested tree the app consumes for the
+// sidebar / grid / detail views.
 //
-// Design contract (PLAN §3): swapping the .xlsx and pushing must regenerate
-// this JSON with no code changes. So column access is by HEADER NAME (robust
-// to column reordering) and a future "서브시리즈명" column is auto-picked up.
+// Design contract (ADR 0002 / PLAN): the data source is Google Sheets while the
+// metadata is in flux; SSG and the derivation rules are untouched. Only the
+// input seam changed — column access stays by HEADER NAME (robust to column
+// reordering) and the optional "서브시리즈명" column is auto-picked up.
 //
-// Note: SheetJS ESM build does not auto-wire fs — read the bytes ourselves
-// and use XLSX.read(buffer) instead of XLSX.readFile (which throws here).
+// Source-of-truth policy (D4): with GOOGLE_SHEETS_API_KEY set, fetch from the
+// sheet (any failure throws → build fails). In CI/Vercel a missing key also
+// throws. Locally without a key, keep the committed collection.json (offline).
+//
+// Note: xlsx is still imported for XLSX.SSF.format (date serial → string).
 
 import * as XLSX from "xlsx";
-import { readFileSync, writeFileSync, readdirSync } from "node:fs";
+import { writeFileSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseRegistration } from "./lib/filename.mjs";
+import { fetchSheetRows } from "./lib/sheets.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const SOURCE_DIR = join(ROOT, "data", "source");
 const OUT_FILE = join(ROOT, "data", "collection.json");
 
 const COLLECTION = { code: "C", name: "신수찬 컬렉션" };
 
-// xlsx header (Korean) → field. Absent headers simply yield null.
+// Sheet header (Korean) → field. Absent headers simply yield null.
 const COL = {
   fileName: "등록번호(파일명)",
-  전자여부: "전자여부",
   date: "생산일자",
   형태: "형태",
   생산자: "생산자",
+  분량: "분량",
   content: "자료내용",
   title: "제목",
-  subseriesName: "서브시리즈명", // future column; absent today → code fallback
+  subseriesName: "서브시리즈명", // optional column; absent → code fallback
 };
 
 const SERIES_NUM = /^S(\d+)$/;
@@ -56,25 +61,6 @@ function formatExcelDate(value, date1904) {
   return clean(value);
 }
 
-// Source of truth is the single .xlsx in data/source. If several exist (e.g. a
-// dated drop "…_0614.xlsx" alongside the original), pick deterministically: the
-// lexicographically-last name, so a dated suffix wins over the plain name and a
-// newer date wins over an older one. Warn so accidental duplicates are visible.
-function findWorkbook(dir) {
-  const names = readdirSync(dir)
-    .filter((n) => n.toLowerCase().endsWith(".xlsx") && !n.startsWith("~$"))
-    .sort();
-  if (names.length === 0) throw new Error(`No .xlsx found in ${dir}`);
-  const chosen = names[names.length - 1];
-  if (names.length > 1) {
-    console.warn(
-      `[build-data] ⚠ ${names.length} .xlsx in ${dir}; using "${chosen}". ` +
-        `Keep one source to avoid ambiguity (found: ${names.join(", ")})`,
-    );
-  }
-  return join(dir, chosen);
-}
-
 /** One spreadsheet row → an internal file record (null for blank rows). */
 function rowToFile(row, seriesName, formatDate) {
   const fileName = clean(row[COL.fileName]);
@@ -92,9 +78,9 @@ function rowToFile(row, seriesName, formatDate) {
     date: formatDate(row[COL.date]),
     content: clean(row[COL.content]),
     meta: {
-      전자여부: clean(row[COL.전자여부]),
       형태: clean(row[COL.형태]),
       생산자: clean(row[COL.생산자]),
+      분량: clean(row[COL.분량]),
     },
     image: { publicId, ext },
     ai: null, // ★ reserved — wired to a future AI-verdict xlsx (PLAN §7)
@@ -119,19 +105,10 @@ function publicFile(file, subseriesName) {
   };
 }
 
-function readAllFiles(workbookPath) {
-  const wb = XLSX.read(readFileSync(workbookPath), { type: "buffer" });
-  const date1904 = Boolean(wb.Workbook?.WBProps?.date1904);
-  const formatDate = (value) => formatExcelDate(value, date1904);
-
+/** Fetched sheets (tab = 시리즈) → flat internal file records. */
+function readFilesFromSheets(sheets, formatDate) {
   const files = [];
-  for (const sheetName of wb.SheetNames) {
-    // raw:true keeps date cells as serial numbers so formatExcelDate can
-    // normalize them; text cells (incl. already-formatted dates) pass through.
-    const rows = XLSX.utils.sheet_to_json(wb.Sheets[sheetName], {
-      defval: null,
-      raw: true,
-    });
+  for (const { sheetName, rows } of sheets) {
     for (const row of rows) {
       const file = rowToFile(row, sheetName, formatDate);
       if (file) files.push(file);
@@ -227,14 +204,45 @@ function logSummary(tree) {
   }
 }
 
-function main() {
-  const workbookPath = findWorkbook(SOURCE_DIR);
-  const files = dedupeById(readAllFiles(workbookPath));
+async function main() {
+  const key = process.env.GOOGLE_SHEETS_API_KEY;
+  const sheetId = process.env.GOOGLE_SHEET_ID;
+  const isCI = Boolean(process.env.CI || process.env.VERCEL);
+
+  // D4: without a key, CI/Vercel must fail loudly (no silent stale data);
+  // local dev falls back to the committed snapshot so offline work isn't blocked.
+  if (!key) {
+    if (isCI) {
+      throw new Error(
+        "GOOGLE_SHEETS_API_KEY is required for CI/Vercel builds " +
+          "(D4: no silent fallback in production).",
+      );
+    }
+    if (!existsSync(OUT_FILE)) {
+      throw new Error(
+        `No GOOGLE_SHEETS_API_KEY and no committed ${OUT_FILE} to fall back to. ` +
+          "Set GOOGLE_SHEET_ID + GOOGLE_SHEETS_API_KEY in .env.local to fetch from Google Sheets.",
+      );
+    }
+    console.log(
+      `[build-data] no GOOGLE_SHEETS_API_KEY — keeping committed collection.json (offline dev).`,
+    );
+    return;
+  }
+
+  // Google Sheets is the source of truth. Dates arrive as 1900-epoch serial
+  // numbers (dateTimeRenderOption=SERIAL_NUMBER) → formatExcelDate(v, false).
+  const sheets = await fetchSheetRows(sheetId, key);
+  const formatDate = (value) => formatExcelDate(value, false);
+  const files = dedupeById(readFilesFromSheets(sheets, formatDate));
   const tree = buildTree(files);
 
   writeFileSync(OUT_FILE, JSON.stringify(tree, null, 2) + "\n", "utf8");
   logSummary(tree);
-  console.log(`\n[build-data] wrote ${OUT_FILE}\n`);
+  console.log(`\n[build-data] wrote ${OUT_FILE} from Google Sheets\n`);
 }
 
-main();
+main().catch((err) => {
+  console.error(`\n[build-data] ✗ ${err.message}\n`);
+  process.exit(1);
+});

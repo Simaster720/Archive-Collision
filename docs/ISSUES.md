@@ -16,9 +16,16 @@
 
 ## 2. 엑셀 ↔ 실제 이미지 불일치 (현재 사이트 198개 표시)
 
-- **상태**: 보류 (현재 엑셀 기준으로 진행하기로 함. 엑셀 수정/교체 시 빌드가 자동 반영)
-- **내용**:
+- **상태**: ✅ **완료 (closed, 2026-06-15)** — #3(Google Sheets 전환)과 함께 정리. 시트 `수업` 탭에서 유령 SS13 `.png` 2행 삭제 + SS14 2행 추가 → 200개 완성. 상세: [PLAN](./PLAN-gsheets-data-source.md) D6 / [ADR 0002](./adr/0002-gsheets-buildtime-data-source.md).
+- **내용(당시)**:
   - **엑셀에만 있음(이미지 없음)**: `S1_SS13_01.png`, `S1_SS13_02.png` — 생산일자 2026-06-14의 중복/유령 행. 디스크엔 같은 번호 `.JPG`만 존재. 빌드 시 첫 행 우선 dedupe로 제외됨(경고 로그).
-  - **이미지에만 있음(엑셀 없음)**: `S1_SS14_01.png`, `S1_SS14_02.png` — 수업 14번째 서브시리즈(SS14). 엑셀에 행이 없어 사이트 미표시. (이미지는 Cloudinary에 업로드돼 있음 → 엑셀에 행 추가만 하면 즉시 표시)
-- **현재 결과**: 사이트 198개 (수업 110 / 원우회 37 / 교내활동 51). Cloudinary엔 200장 모두 존재.
-- **정정 방법(원할 경우)**: 엑셀 수업 시트에서 유령 `.png` 2행 삭제 + `S1_SS14_01.png`/`S1_SS14_02.png` 2행 추가 후 `data/source/`에 교체 → push 시 자동 반영(200개).
+  - **이미지에만 있음(엑셀 없음)**: `S1_SS14_01.png`, `S1_SS14_02.png` — 수업 14번째 서브시리즈(SS14). 엑셀에 행이 없어 사이트 미표시. (이미지는 Cloudinary에 업로드돼 있음 → 행 추가만 하면 즉시 표시)
+- **완료 내역**: Google Sheet `수업` 탭에서 유령 `.png` 2행 삭제 + `S1_SS14_01.png`/`S1_SS14_02.png` 추가. `npm run data` → `totals.files=200`(수업 112 / 원우회 37 / 교내활동 51, 서브시리즈 20). Cloudinary 200장(SS13=jpeg·SS14=png)과 일치 확인. 이후 데이터 단일 소스 = 시트.
+
+---
+
+## 3. 데이터 소스 전환 검토 — 빌드타임 엑셀 → Google Sheets 조회
+
+- **상태**: ✅ **구현 완료 (2026-06-15)** — Phase 1(파이프라인 전환: [scripts/lib/sheets.mjs](../scripts/lib/sheets.mjs) + [build-data.mjs](../scripts/build-data.mjs) 입력부) + D11 메타 스키마(`전자여부`→`분량`) + Phase 2(새로고침 버튼: [app/api/refresh/route.ts](../app/api/refresh/route.ts)·[app/refresh/page.tsx](../app/refresh/page.tsx)) 구현·로컬 검증 완료. 배포는 **Vercel env(Production·Preview)에 키 설정 후** develop push.
+- **내용**: 최종본 확정 전까지 엑셀이 계속 수정되므로, Google Sheets를 단일 소스로 두고 웹이 빌드타임에 조회해 표기. SSG 유지 + Sheets API(API 키) + 새로고침 버튼(Deploy Hook). 기준 데이터는 `신수찬 콜렉션_0614_수정.xlsx`(시트 이관본).
+- **상세 문서**: [이슈](./ISSUE-gsheets-data-source.md) · [계획](./PLAN-gsheets-data-source.md) · [핸드오프](./HANDOFF-gsheets.md) · [ADR 0002](./adr/0002-gsheets-buildtime-data-source.md)

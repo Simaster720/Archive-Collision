@@ -8,7 +8,7 @@ import type { FileItem } from "@/lib/types";
 function metaFields(file: FileItem) {
   return [
     { label: "등록번호", value: file.fileName },
-    { label: "전자여부", value: file.meta.전자여부 },
+    { label: "분량", value: file.meta.분량 },
     { label: "생산일자", value: file.date },
     { label: "형태", value: file.meta.형태 },
     { label: "생산자", value: file.meta.생산자, pill: true },
