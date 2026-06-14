@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "data": "node scripts/build-data.mjs",
+    "data": "node --env-file=.env.local scripts/build-data.mjs",
     "upload": "node --env-file=.env.local scripts/upload-cloudinary.mjs",
     "dev": "next dev",
     "prebuild": "node scripts/build-data.mjs",

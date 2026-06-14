@@ -16,9 +16,9 @@ export interface SubseriesRef {
 }
 
 export interface FileMeta {
-  전자여부: string | null;
   형태: string | null;
   생산자: string | null;
+  분량: string | null;
 }
 
 export interface FileImage {
