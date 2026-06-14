@@ -300,8 +300,6 @@
 <body>
   <header class="page-head">
     <h1>AI 판별 트래킹 박스 — 디자인 확정 데모</h1>
-    <p>실제 판별 데이터 5장 위에 박스를 그렸습니다. 박스의 모양·색·라벨·근거 표시를 아래 <code>CONFIG</code>에서 조절하세요.</p>
-    <p>이 5장은 모두 <b>진짜 사진</b>입니다. 그런데도 빨갛게 뜨는 것(=AI로 오인)이 작업의 핵심입니다.</p>
     <div class="legend" id="legend"></div>
   </header>
 
@@ -353,7 +351,7 @@
     showDescription: true,      // sidelist 에 근거 설명 문장 표시
 
     // ── 종합 문구 ───────────────────────────────────────────────────────
-    showSummary: true,
+    showSummary: false,         // 기본 꺼짐. true 로 바꾸면 아래 문구가 이미지 위/아래 표시됨
     summaryTemplate: '{pct}% 정도 생성된 것으로 의심됩니다',
     //   사용 가능한 치환자: {pct} {id} {answer} {judgement} {algo} {gpt}
     summaryPosition: 'top',     // 'top'(이미지 위) | 'bottom'(이미지 아래)
@@ -548,8 +546,7 @@
       head.innerHTML =
         `<span class="id">${esc(image.id)}</span>` +
         `<span>${image.image.width}×${image.image.height}px</span>` +
-        `<span class="badge ${wrong ? 'wrong' : 'right'}">최종 ${esc(v.finalScore)}% · ${esc(v.judgement)}</span>` +
-        `<span class="why">${esc(image.why)}</span>`;
+        `<span class="badge ${wrong ? 'wrong' : 'right'}">최종 ${esc(v.finalScore)}% · ${esc(v.judgement)}</span>`;
       return head;
     }
 
@@ -649,10 +646,9 @@
     function buildLegend() {
       const L = document.getElementById('legend');
       L.innerHTML =
-        '<span class="item"><span class="dot" style="background:#f38ba8"></span>빨강 ≥75% · AI 신호 강함</span>' +
-        '<span class="item"><span class="dot" style="background:#f9e2af"></span>노랑 ≥50% · 중간 신호</span>' +
-        '<span class="item"><span class="dot" style="background:#a6e3a1"></span>초록 &lt;50% · 실제 사진 특성</span>' +
-        '<span class="item" style="color:var(--text-faint)">오답 = 진짜 사진을 AI로 오인 (이 작업의 핵심)</span>';
+        '<span class="item"><span class="dot" style="background:#f38ba8"></span>빨강 ≥75%</span>' +
+        '<span class="item"><span class="dot" style="background:#f9e2af"></span>노랑 ≥50%</span>' +
+        '<span class="item"><span class="dot" style="background:#a6e3a1"></span>초록 &lt;50%</span>';
     }
 
     // ── 부트 ──────────────────────────────────────────────────────────

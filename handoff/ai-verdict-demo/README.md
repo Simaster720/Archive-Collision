@@ -13,10 +13,15 @@
 
 ```
 handoff/ai-verdict-demo/
-├─ index.html   ← 이 파일을 브라우저로 연다 + 여기서 디자인을 수정한다
-├─ data.js      ← 5장의 판별 데이터 (자동 생성물, 손대지 않음)
-└─ README.md    ← 지금 읽는 안내
+├─ index.html        ← 이 파일을 브라우저로 연다 + 여기서 디자인을 수정한다
+├─ data.js           ← 5장의 판별 데이터 (자동 생성물, 손대지 않음)
+├─ README.md         ← 지금 읽는 안내
+└─ HANDOFF-BRIEF.md  ← 코딩 에이전트에게 함께 건네는 맥락 지시문(복사용)
 ```
+
+> 🤝 **코딩 에이전트와 함께 작업한다면**: [`HANDOFF-BRIEF.md`](HANDOFF-BRIEF.md)의 "붙여넣기용
+> 지시문"을 `index.html`과 함께 그대로 붙여넣어 주세요. 작업 맥락·편집 규칙·이식성 계약·CONFIG
+> 전체 표를 한 번에 전달합니다.
 
 ---
 
