@@ -56,12 +56,23 @@ function formatExcelDate(value, date1904) {
   return clean(value);
 }
 
+// Source of truth is the single .xlsx in data/source. If several exist (e.g. a
+// dated drop "…_0614.xlsx" alongside the original), pick deterministically: the
+// lexicographically-last name, so a dated suffix wins over the plain name and a
+// newer date wins over an older one. Warn so accidental duplicates are visible.
 function findWorkbook(dir) {
-  const name = readdirSync(dir).find(
-    (n) => n.toLowerCase().endsWith(".xlsx") && !n.startsWith("~$"),
-  );
-  if (!name) throw new Error(`No .xlsx found in ${dir}`);
-  return join(dir, name);
+  const names = readdirSync(dir)
+    .filter((n) => n.toLowerCase().endsWith(".xlsx") && !n.startsWith("~$"))
+    .sort();
+  if (names.length === 0) throw new Error(`No .xlsx found in ${dir}`);
+  const chosen = names[names.length - 1];
+  if (names.length > 1) {
+    console.warn(
+      `[build-data] ⚠ ${names.length} .xlsx in ${dir}; using "${chosen}". ` +
+        `Keep one source to avoid ambiguity (found: ${names.join(", ")})`,
+    );
+  }
+  return join(dir, chosen);
 }
 
 /** One spreadsheet row → an internal file record (null for blank rows). */
