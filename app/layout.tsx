@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SidebarTree from "@/components/SidebarTree";
+import Footer from "@/components/Footer";
 import { getNavTree } from "@/lib/collection";
 
 export const metadata: Metadata = {
@@ -31,7 +32,10 @@ export default function RootLayout({
           <aside className="w-full border-b border-border bg-background md:sticky md:top-0 md:h-screen md:w-72 md:shrink-0 md:overflow-y-auto md:border-b-0 md:border-r">
             <SidebarTree tree={tree} />
           </aside>
-          <main className="min-w-0 flex-1">{children}</main>
+          <main className="flex min-w-0 flex-1 flex-col">
+            <div className="flex-1">{children}</div>
+            <Footer name={tree.collection.name} />
+          </main>
         </div>
       </body>
     </html>

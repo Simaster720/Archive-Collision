@@ -18,6 +18,10 @@ export default function FileGrid({
   files: FileItem[];
   basePath: string;
 }) {
+  if (files.length === 0) {
+    return <p className="text-sm text-muted">파일이 없습니다.</p>;
+  }
+
   return (
     <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3">
       {files.map((f) => {
