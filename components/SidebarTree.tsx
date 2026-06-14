@@ -5,9 +5,9 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import type { NavTree } from "@/lib/types";
 
-// SeMA-style classification tree. Persistent across routes (rendered in the
-// root layout). [C] collection header doubles as the home button (PLAN §6),
-// since the global site header is intentionally dropped.
+// SeMA-style classification tree (기획서 p.1-3). Persistent across routes
+// (rendered in the root layout). The dark [C] header doubles as the home
+// button — it never collapses (PLAN §6 / 기획서: 상시 떠있는 홈 버튼).
 
 export default function SidebarTree({ tree }: { tree: NavTree }) {
   const pathname = usePathname();
@@ -30,14 +30,18 @@ export default function SidebarTree({ tree }: { tree: NavTree }) {
 
   return (
     <nav aria-label="컬렉션 분류" className="flex flex-col text-sm">
-      {/* [C] collection header = home button, sticky at the top of the sidebar */}
+      {/* [C] dark header = home button (always visible, never collapses) */}
       <Link
         href="/"
-        className={`sticky top-0 z-10 border-b border-border bg-background px-4 py-4 font-semibold tracking-tight transition-colors hover:text-link ${
-          isHome ? "text-foreground" : "text-foreground/90"
-        }`}
+        aria-current={isHome ? "page" : undefined}
+        className="sticky top-0 z-10 flex items-center justify-between gap-2 bg-neutral-900 px-4 py-3.5 text-white transition-colors hover:bg-neutral-800"
       >
-        {tree.collection.name}
+        <span className="font-semibold tracking-tight">
+          <span className="text-white/55">[C]</span> {tree.collection.name}
+        </span>
+        <span aria-hidden className="text-white/40">
+          —
+        </span>
       </Link>
 
       <ul className="px-2 py-2">
@@ -50,37 +54,40 @@ export default function SidebarTree({ tree }: { tree: NavTree }) {
                 type="button"
                 onClick={() => toggle(series.code)}
                 aria-expanded={expanded}
-                className={`flex w-full items-center gap-1.5 rounded px-2 py-1.5 text-left transition-colors hover:bg-neutral-100 ${
-                  seriesActive ? "font-medium text-foreground" : "text-foreground/80"
+                className={`flex w-full items-center gap-2 rounded px-2 py-1.5 text-left transition-colors hover:bg-neutral-100 ${
+                  seriesActive ? "font-medium text-foreground" : "text-foreground/85"
                 }`}
               >
-                <span className="w-3 shrink-0 text-[10px] text-muted">
-                  {expanded ? "▾" : "▸"}
+                <span
+                  aria-hidden
+                  className="grid h-4 w-4 shrink-0 place-items-center rounded-full border border-neutral-400 text-[10px] leading-none text-neutral-500"
+                >
+                  {expanded ? "−" : "+"}
                 </span>
+                <span className="text-xs text-muted">[S]</span>
                 <span className="flex-1 truncate">{series.name}</span>
-                <span className="shrink-0 text-xs text-muted">{series.fileCount}</span>
               </button>
 
               {expanded && (
-                <ul className="ml-3 border-l border-border pl-2">
+                <ul className="ml-[1.45rem] border-l border-border pl-2">
                   {series.subseries.map((sub) => {
                     const active =
-                      series.code === seriesCode && sub.code === subseriesCode;
+                      seriesActive && sub.code === subseriesCode;
                     return (
                       <li key={sub.code}>
                         <Link
                           href={`/${series.code}/${sub.code}`}
                           aria-current={active ? "page" : undefined}
-                          className={`flex items-center gap-2 rounded px-2 py-1.5 transition-colors hover:bg-neutral-100 ${
+                          className={`flex items-start gap-1.5 rounded px-2 py-1.5 transition-colors hover:bg-neutral-100 ${
                             active
                               ? "bg-neutral-100 font-medium text-foreground"
-                              : "text-foreground/75"
+                              : "text-foreground/70"
                           }`}
                         >
-                          <span className="flex-1 truncate">{sub.name}</span>
-                          <span className="shrink-0 text-xs text-muted">
-                            {sub.fileCount}
+                          <span className="mt-px shrink-0 text-xs text-muted">
+                            [SS]
                           </span>
+                          <span className="flex-1 break-keep">{sub.name}</span>
                         </Link>
                       </li>
                     );
