@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI 판별 박스 — 작가 핸드오프 데모</title>
+
+<!--
+================================================================================
+  AI 판별 트래킹 박스 — 디자인 확정용 단독 데모
+================================================================================
+
+  ▶ 이 파일은 무엇인가
+    "신수찬 컬렉션" 아카이브의 AI 판별 오버레이(이미지 위 색상 트래킹 박스)의
+    **시각 디자인을 확정**하기 위한 단독 HTML입니다. 실제 판별 데이터(5장)로
+    박스를 그려 놓았으니, 박스의 모양·색·라벨·근거 표시 방식을 여기서 직접
+    만져보고 마음에 드는 값으로 맞추면 됩니다.
+
+  ▶ 배포 웹과 분리됨
+    이 파일은 `app/` 밖(`handoff/`)에 있어 실제 웹사이트 배포에 포함되지 않습니다.
+    여기서 확정한 값만 나중에 웹으로 옮깁니다. 그래서 "값"이 중요합니다.
+
+  ▶ 어떻게 수정하나  (★중요)
+    아래 <script> 안의 `CONFIG = { … }` 블록 **안에서만** 숫자/단어를 바꾸세요.
+    그 아래 "엔진" 코드는 건드리지 않아도 됩니다. 저장 후 브라우저 새로고침하면
+    5장에 동시에 반영됩니다(디자인 한 번 고치면 5장이 같이 바뀜).
+
+  ▶ 다 하면
+    수정한 이 `index.html` 파일을 그대로 돌려주세요. CONFIG 값만 복사해
+    웹(React/Tailwind)으로 1:1 이식합니다.
+
+  ▶ 데이터 한 줄 요약
+    박스 색 = AI 의심 강도. 빨강(≥75%) / 노랑(≥50%) / 초록(<50%).
+    여기 5장은 전부 "실제로 찍은 진짜 사진"입니다. 그런데도 박스가 빨갛게 뜨는
+    것(=AI로 오인)이 이 작업의 핵심입니다. (4번 이미지만 "평온"하게 초록입니다.)
+
+  ▶ 여는 법
+    이 폴더의 index.html을 브라우저로 그냥 열면 됩니다(인터넷 연결 필요 — 이미지는
+    Cloudinary에서 불러옵니다). 자세한 설명은 같은 폴더의 README.md 참고.
+================================================================================
+-->
+
+<style>
+  /* ───────────────────────────────────────────────────────────────────────
+     :root — 페이지 테마 토큰 + 박스 시각 토큰.
+     박스 관련 변수(--box-*)는 아래 CONFIG 값으로 런타임에 덮어써집니다.
+     (React 이식 시 이 변수들이 그대로 CSS 변수 / Tailwind 토큰에 대응됩니다.)
+     ─────────────────────────────────────────────────────────────────────── */
+  :root {
+    --bg: #11111b;
+    --panel: #181825;
+    --panel-2: #1e1e2e;
+    --line: #313244;
+    --text: #cdd6f4;
+    --text-dim: #a6adc8;
+    --text-faint: #6c7086;
+    --red: #f38ba8;
+    --yellow: #f9e2af;
+    --green: #a6e3a1;
+    --radius: 10px;
+    --mono: "SFMono-Regular", ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
+    --sans: ui-sans-serif, system-ui, "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+
+    /* ↓ CONFIG가 런타임에 채움 (기본값은 안전한 폴백) */
+    --box-border-width: 2px;
+    --box-border-style: solid;
+    --box-border-radius: 0px;
+    --box-fill-opacity: 0;
+    --jitter-amount: 0px;
+    --label-size: 11px;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── 페이지 헤더 / 범례 (데모 설명용 — 박스 디자인 대상 아님) ── */
+  .page-head {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 32px 24px 8px;
+  }
+  .page-head h1 {
+    font-size: 20px;
+    letter-spacing: -0.01em;
+    margin: 0 0 6px;
+  }
+  .page-head p {
+    margin: 4px 0;
+    color: var(--text-dim);
+    font-size: 13.5px;
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    font-size: 12.5px;
+    font-family: var(--mono);
+  }
+  .legend .item { display: inline-flex; align-items: center; gap: 7px; }
+  .legend .dot { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+
+  /* ── 카드 (이미지 1장 단위) ── */
+  main { max-width: 1180px; margin: 0 auto; padding: 12px 24px 64px; }
+  .card {
+    margin: 28px 0;
+    padding: 18px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+  }
+  .card-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--text-faint);
+  }
+  .card-head .id { color: var(--text); font-weight: 600; }
+  .card-head .badge {
+    padding: 1px 8px;
+    border-radius: 999px;
+    border: 1px solid currentColor;
+    font-size: 11.5px;
+  }
+  .badge.wrong { color: var(--red); }
+  .badge.right { color: var(--green); }
+  .card-head .why { color: var(--text-faint); font-style: italic; }
+
+  /* ── 종합 문구 (summary) ── */
+  .summary {
+    font-size: 15px;
+    color: var(--text);
+    padding: 10px 0;
+    font-family: var(--mono);
+  }
+  .summary .pct { font-weight: 700; }
+  .summary.is-wrong .pct { color: var(--red); }
+  .summary.is-right .pct { color: var(--green); }
+  .summary .caret {
+    display: inline-block;
+    width: 8px;
+    background: var(--text);
+    margin-left: 2px;
+    animation: blink 1s step-end infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  /* ── 스테이지: 이미지 프레임 + (옵션) 우측 사이드리스트 ── */
+  .stage { display: flex; gap: 18px; align-items: flex-start; }
+  .stage.side-below { flex-direction: column; }
+
+  .frame {
+    position: relative;
+    width: 100%;
+    max-width: 760px;
+    flex: 1 1 auto;
+    background: var(--panel-2);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .frame .photo { display: block; width: 100%; height: auto; }
+  .frame .boxes { position: absolute; inset: 0; }
+
+  /* ── 트래킹 박스 ── */
+  .box {
+    position: absolute;
+    border-width: var(--box-border-width);
+    border-style: var(--box-border-style);
+    border-radius: var(--box-border-radius);
+    border-color: var(--c);
+    background: var(--c-fill);
+    pointer-events: auto;
+    transition: opacity 0.18s ease;
+  }
+  .box.corner-brackets { border: none; }
+  .box.corner-brackets::before,
+  .box.corner-brackets::after {
+    content: ""; position: absolute; width: 14px; height: 14px;
+    border: var(--box-border-width) var(--box-border-style) var(--c);
+  }
+  .box.corner-brackets::before { left: -1px; top: -1px; border-right: none; border-bottom: none; }
+  .box.corner-brackets::after { right: -1px; bottom: -1px; border-left: none; border-top: none; }
+  .box.corner-corners { border: none; }
+  .box.corner-corners > .corner {
+    position: absolute; width: 12px; height: 12px;
+    border: var(--box-border-width) var(--box-border-style) var(--c);
+  }
+  .box.corner-corners .c-tl { left: -1px; top: -1px; border-right: none; border-bottom: none; }
+  .box.corner-corners .c-tr { right: -1px; top: -1px; border-left: none; border-bottom: none; }
+  .box.corner-corners .c-bl { left: -1px; bottom: -1px; border-right: none; border-top: none; }
+  .box.corner-corners .c-br { right: -1px; bottom: -1px; border-left: none; border-top: none; }
+
+  .box-label {
+    position: absolute;
+    white-space: nowrap;
+    font-family: var(--mono);
+    font-size: var(--label-size);
+    line-height: 1.4;
+    padding: 1px 5px;
+    background: color-mix(in srgb, var(--c) 22%, #11111b 78%);
+    color: var(--c);
+    border-radius: 3px;
+  }
+  .label-inside-tl { left: -1px; top: -1px; }
+  .label-outside { left: -1px; bottom: 100%; margin-bottom: 2px; }
+
+  /* tooltip 모드: 박스에 hover 시 근거 표시 */
+  .box .tip {
+    position: absolute;
+    left: 50%; bottom: 100%;
+    transform: translateX(-50%) translateY(-6px);
+    width: max-content; max-width: 240px;
+    padding: 8px 10px;
+    background: #11111bf2;
+    border: 1px solid var(--c);
+    border-radius: 6px;
+    color: var(--text);
+    font-size: 12px;
+    font-family: var(--sans);
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.12s ease;
+    z-index: 5;
+    pointer-events: none;
+  }
+  .box:hover .tip { opacity: 1; visibility: visible; }
+  .box:hover { z-index: 6; }
+  .tip .tip-t { color: var(--c); font-family: var(--mono); font-size: 11px; }
+
+  /* ── 사이드 리스트 (근거) ── */
+  .sidelist {
+    flex: 0 0 280px;
+    min-width: 0;
+    font-size: 12.5px;
+  }
+  .stage.side-below .sidelist { flex: 1 1 auto; width: 100%; }
+  .sidelist h3 {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--text-faint); margin: 2px 0 10px;
+  }
+  .sidelist ol { list-style: none; margin: 0; padding: 0; }
+  .sidelist li { display: flex; gap: 9px; padding: 7px 0; border-top: 1px solid var(--line); }
+  .sidelist li:first-child { border-top: none; }
+  .sidelist .swatch {
+    flex: 0 0 auto; width: 14px; height: 14px; border-radius: 3px; margin-top: 2px;
+    border: 1px solid color-mix(in srgb, var(--c) 60%, transparent);
+    background: var(--c);
+  }
+  .sidelist .li-body { min-width: 0; }
+  .sidelist .li-top { display: flex; gap: 6px; align-items: baseline; }
+  .sidelist .num { font-family: var(--mono); color: var(--text-faint); }
+  .sidelist .t { color: var(--text); font-weight: 600; }
+  .sidelist .pct { font-family: var(--mono); margin-left: auto; color: var(--c); }
+  .sidelist .desc { margin: 3px 0 0; color: var(--text-dim); font-size: 12px; }
+
+  /* below 배치일 때 사이드리스트를 2열로 */
+  .stage.side-below .sidelist ol {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 24px;
+  }
+  @media (max-width: 720px) {
+    .stage.side-below .sidelist ol { grid-template-columns: 1fr; }
+  }
+
+  /* ── caption 모드 ── */
+  figcaption.caption {
+    margin-top: 10px;
+    font-size: 12.5px;
+    color: var(--text-dim);
+    font-family: var(--mono);
+  }
+  figcaption.caption .c-item { color: var(--c); margin-right: 12px; white-space: nowrap; }
+
+  /* ── 반응형: 우측 사이드리스트는 좁은 화면에서 아래로 ── */
+  @media (max-width: 880px) {
+    .stage:not(.side-below) { flex-direction: column; }
+    .stage:not(.side-below) .sidelist { flex: 1 1 auto; width: 100%; }
+    .frame { max-width: none; }
+  }
+
+  footer {
+    max-width: 1180px; margin: 0 auto; padding: 24px;
+    color: var(--text-faint); font-size: 12px; border-top: 1px solid var(--line);
+  }
+</style>
+</head>
+<body>
+  <header class="page-head">
+    <h1>AI 판별 트래킹 박스 — 디자인 확정 데모</h1>
+    <div class="legend" id="legend"></div>
+  </header>
+
+  <main id="app"></main>
+
+  <footer>
+    <div>handoff/ai-verdict-demo · 비배포 아티팩트 · 데이터 출처: data/source/eval_results.xlsx</div>
+    <div>박스 좌표는 원본 픽셀 기준이며 표시 크기에 맞춰 % 로 스케일됩니다.</div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script>
+  /* ╔══════════════════════════════════════════════════════════════════════╗
+     ║  CONFIG — 디자인 면. 여기 값만 바꾸세요. (그 아래 엔진은 건드리지 마세요) ║
+     ╚══════════════════════════════════════════════════════════════════════╝ */
+  const CONFIG = {
+    // ── 선별: 박스 몇 개를, 어떤 기준으로 보여줄지 ──────────────────────
+    boxCount: 6,          // 노출 박스 수 (showAll:true 면 무시)
+    filter: 'signal',     // 'signal'(신호 강한 순) | 'partial'(전체화면 박스 제외) | 'all'(전부)
+    showAll: false,       // true 면 35개 전부 표시 (boxCount 무시) — 데이터 전체 확인용
+    sortBy: 'score',      // 'score'(의심도 높은 순) | 'order'(데이터 원래 순서)
+    skipNullScore: true,  // 점수 없는 박스 건너뛰기 (false 면 회색으로 표시)
+
+    // ── 박스 모양 ───────────────────────────────────────────────────────
+    borderWidth: 2,       // 테두리 두께(px)
+    borderStyle: 'solid', // 'solid' | 'dashed' | 'dotted'
+    borderRadius: 0,      // 모서리 둥글기(px)
+    cornerStyle: 'plain', // 'plain'(테두리 전체) | 'brackets'(좌상·우하 ⌐) | 'corners'(네 모서리)
+    fillOpacity: 0,       // 박스 내부 채움 (0=투명 ~ 1=불투명). 0.08 정도면 은은한 하이라이트
+
+    // ── 색 ─────────────────────────────────────────────────────────────
+    useDataColor: true,   // true=데이터 원본 색 사용 / false=아래 colorScale 로 재계산
+    colorScale: [         // ensemble_score(0~1) 임계값 → 색  (useDataColor:false 일 때)
+      { min: 0.75, color: '#f38ba8' }, // 빨강
+      { min: 0.50, color: '#f9e2af' }, // 노랑
+      { min: 0.00, color: '#a6e3a1' }, // 초록
+    ],
+
+    // ── 라벨 (박스에 붙는 글자) ─────────────────────────────────────────
+    showNumber: true,           // #1, #2 …
+    showTitle: true,            // 평가항목 이름 (예: "헤일로 아티팩트")
+    showPct: true,              // 의심도 %
+    labelPosition: 'inside-tl', // 'inside-tl'(박스 안 좌상단) | 'outside'(박스 위) | 'none'(숨김)
+    labelSize: 11,              // 라벨 글자 크기(px)
+
+    // ── 근거 표시 방식 ──────────────────────────────────────────────────
+    evidenceMode: 'sidelist',   // 'sidelist'(옆 목록) | 'tooltip'(박스 hover) | 'caption'(이미지 아래 한 줄)
+    sidelistPosition: 'right',  // 'right'(이미지 오른쪽) | 'below'(이미지 아래 2열)
+    showDescription: true,      // sidelist 에 근거 설명 문장 표시
+
+    // ── 종합 문구 ───────────────────────────────────────────────────────
+    showSummary: false,         // 기본 꺼짐. true 로 바꾸면 아래 문구가 이미지 위/아래 표시됨
+    summaryTemplate: '{pct}% 정도 생성된 것으로 의심됩니다',
+    //   사용 가능한 치환자: {pct} {id} {answer} {judgement} {algo} {gpt}
+    summaryPosition: 'top',     // 'top'(이미지 위) | 'bottom'(이미지 아래)
+
+    // ── 카드 헤더 (id·원본크기·판정 배지) — 데모 맥락용 ─────────────────
+    showCardHeader: true,
+
+    // ── 연출 (확정 대상 아님 · 탐색용 · 기본 off) ───────────────────────
+    enableAnimation: false, // true 면 종합 문구 타이프라이터 + 박스 순차 등장
+    typeSpeed: 28,          // 타이프라이터 글자당 ms
+    revealStagger: 90,      // 박스 하나씩 등장 간격 ms
+    enableJitter: false,    // true 면 박스가 미세하게 떨림 (탐지중 느낌)
+    jitterAmount: 3,        // 떨림 폭(px)
+  };
+
+  /* ╔══════════════════════════════════════════════════════════════════════╗
+     ║  ENGINE — 렌더 로직. 일반적으로 수정할 필요 없음.                       ║
+     ║  새 디자인 아이디어는 구조를 바꾸기보다 CONFIG knob 추가를 권장합니다     ║
+     ║  (이식성 유지). 자세한 건 README.md 참고.                              ║
+     ╚══════════════════════════════════════════════════════════════════════╝ */
+  (function () {
+    const C = CONFIG;
+    const DATA = window.AI_DEMO_DATA;
+    const GREY = '#6c7086';
+    const reduceMotion = window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!DATA || !Array.isArray(DATA.images)) {
+      document.getElementById('app').innerHTML =
+        '<p style="color:#f38ba8;padding:24px">data.js 를 불러오지 못했습니다. ' +
+        'index.html 과 같은 폴더에 data.js 가 있는지 확인하세요.</p>';
+      return;
+    }
+
+    // ── 유틸 ──────────────────────────────────────────────────────────
+    const el = (tag, cls, html) => {
+      const n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (html != null) n.innerHTML = html;
+      return n;
+    };
+    const esc = (s) => String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+    // 표시 크기와 무관하게 박스가 따라오도록 % 좌표 사용 (PLAN §5).
+    const pct = (a, b) => (100 * a / b) + '%';
+
+    // CONFIG 의 박스 시각값을 :root CSS 변수로 미러링 (React 토큰 매핑용).
+    function applyThemeVars() {
+      const r = document.documentElement.style;
+      r.setProperty('--box-border-width', C.borderWidth + 'px');
+      r.setProperty('--box-border-style', C.borderStyle);
+      r.setProperty('--box-border-radius', C.borderRadius + 'px');
+      r.setProperty('--box-fill-opacity', String(C.fillOpacity));
+      r.setProperty('--jitter-amount', C.jitterAmount + 'px');
+      r.setProperty('--label-size', C.labelSize + 'px');
+    }
+
+    function isFullFrame(f, img) {
+      return f.x1 <= 0 && f.y1 <= 0 && f.x2 >= img.width && f.y2 >= img.height;
+    }
+
+    function colorFor(f) {
+      if (f.ensemble_score == null) return GREY;
+      if (C.useDataColor && f.color) return f.color;
+      for (const stop of C.colorScale) {
+        if (f.ensemble_score >= stop.min) return stop.color;
+      }
+      return C.colorScale[C.colorScale.length - 1].color;
+    }
+
+    // #RGB / #RRGGBB → rgba(…, alpha)  (fillOpacity 적용용)
+    function hexToRgba(hex, alpha) {
+      let h = (hex || '').replace('#', '');
+      if (h.length === 3) h = h.split('').map((c) => c + c).join('');
+      const n = parseInt(h, 16);
+      const r = (n >> 16) & 255, g = (n >> 8) & 255, b = n & 255;
+      return `rgba(${r},${g},${b},${alpha})`;
+    }
+
+    // 선별 파이프라인: 필터 → 정렬 → 개수 컷 → 번호 매김.
+    function selectBoxes(image) {
+      let list = image.features.map((f, i) => ({ ...f, _srcIndex: i }));
+      if (C.skipNullScore) list = list.filter((f) => f.ensemble_score != null);
+
+      if (C.filter === 'partial' || C.filter === 'signal') {
+        list = list.filter((f) => !isFullFrame(f, image.image));
+      }
+
+      const byScore = (a, b) => (b.ensemble_score ?? -1) - (a.ensemble_score ?? -1);
+      const byOrder = (a, b) => a._srcIndex - b._srcIndex;
+      // 'signal' 은 항상 점수 우선(작은 boxCount 로도 가장 강한 신호가 먼저 보이게).
+      const sorter = (C.filter === 'signal' || C.sortBy === 'score') ? byScore : byOrder;
+      list = list.slice().sort(sorter);
+
+      if (!C.showAll) list = list.slice(0, Math.max(0, C.boxCount));
+      return list.map((f, i) => ({ ...f, _num: i + 1, _color: colorFor(f) }));
+    }
+
+    function labelText(f) {
+      const parts = [];
+      if (C.showNumber) parts.push('#' + f._num);
+      if (C.showTitle && f.title) parts.push(f.title);
+      let s = parts.join(' ');
+      if (C.showPct && f.score_pct != null) s += (s ? ' ' : '') + f.score_pct + '%';
+      return s;
+    }
+
+    function fmtSummary(image) {
+      const v = image.verdict;
+      return C.summaryTemplate
+        .replace(/\{pct\}/g, `<span class="pct">${esc(v.finalScore)}</span>`)
+        .replace(/\{id\}/g, esc(image.id))
+        .replace(/\{answer\}/g, esc(v.answer))
+        .replace(/\{judgement\}/g, esc(v.judgement))
+        .replace(/\{algo\}/g, esc(v.algoScore))
+        .replace(/\{gpt\}/g, esc(v.gptScore));
+    }
+
+    // ── DOM 빌더 ──────────────────────────────────────────────────────
+    function buildBox(f, image) {
+      const box = el('div', 'box corner-' + C.cornerStyle);
+      box.style.left = pct(f.x1, image.image.width);
+      box.style.top = pct(f.y1, image.image.height);
+      box.style.width = pct(f.x2 - f.x1, image.image.width);
+      box.style.height = pct(f.y2 - f.y1, image.image.height);
+      box.style.setProperty('--c', f._color);
+      box.style.setProperty('--c-fill', C.fillOpacity > 0 ? hexToRgba(f._color, C.fillOpacity) : 'transparent');
+      box.title = `#${f._num} ${f.title || ''} (${f.score_pct ?? '?'}%) — ${f.description || ''}`;
+
+      if (C.cornerStyle === 'corners') {
+        for (const c of ['c-tl', 'c-tr', 'c-bl', 'c-br']) box.appendChild(el('span', 'corner ' + c));
+      }
+
+      if (C.labelPosition !== 'none') {
+        const txt = labelText(f);
+        if (txt) {
+          const lbl = el('span', 'box-label label-' + C.labelPosition, esc(txt));
+          box.appendChild(lbl);
+        }
+      }
+
+      if (C.evidenceMode === 'tooltip' && f.description) {
+        const tip = el('div', 'tip',
+          `<div class="tip-t">#${f._num} ${esc(f.title)} · ${esc(f.score_pct)}%</div>${esc(f.description)}`);
+        box.appendChild(tip);
+      }
+      return box;
+    }
+
+    function buildSidelist(boxes) {
+      const wrap = el('div', 'sidelist');
+      wrap.appendChild(el('h3', null, '판별 근거'));
+      const ol = el('ol');
+      for (const f of boxes) {
+        const li = el('li');
+        li.style.setProperty('--c', f._color);
+        const top = `<div class="li-top"><span class="num">#${f._num}</span>` +
+          `<span class="t">${esc(f.title)}</span><span class="pct">${esc(f.score_pct)}%</span></div>`;
+        const desc = (C.showDescription && f.description) ? `<p class="desc">${esc(f.description)}</p>` : '';
+        li.appendChild(el('span', 'swatch'));
+        li.appendChild(el('div', 'li-body', top + desc));
+        ol.appendChild(li);
+      }
+      wrap.appendChild(ol);
+      return wrap;
+    }
+
+    function buildCaption(boxes) {
+      const cap = el('figcaption', 'caption');
+      for (const f of boxes) {
+        const item = el('span', 'c-item',
+          `#${f._num} ${esc(f.title)} (${esc(f.score_pct)}%)`);
+        item.style.setProperty('--c', f._color);
+        cap.appendChild(item);
+      }
+      return cap;
+    }
+
+    function buildSummary(image) {
+      const wrongClass = image.verdict.judgement === '오답' ? 'is-wrong' : 'is-right';
+      const s = el('div', 'summary ' + wrongClass);
+      s.dataset.text = fmtSummary(image);
+      s.innerHTML = s.dataset.text;
+      return s;
+    }
+
+    function buildCardHead(image) {
+      const v = image.verdict;
+      const wrong = v.judgement === '오답';
+      const head = el('div', 'card-head');
+      head.innerHTML =
+        `<span class="id">${esc(image.id)}</span>` +
+        `<span>${image.image.width}×${image.image.height}px</span>` +
+        `<span class="badge ${wrong ? 'wrong' : 'right'}">최종 ${esc(v.finalScore)}% · ${esc(v.judgement)}</span>`;
+      return head;
+    }
+
+    function deliveryUrl(image) {
+      // 4K 원본 직접 로드 방지: 표시용으로 폭 제한(박스는 % 라 화질만 영향).
+      return `https://res.cloudinary.com/${DATA.cloudName}/image/upload/f_auto,q_auto,w_1400/${image.publicId}`;
+    }
+
+    function buildCard(image) {
+      const card = el('section', 'card');
+      if (C.showCardHeader) card.appendChild(buildCardHead(image));
+
+      const summary = C.showSummary ? buildSummary(image) : null;
+      if (summary && C.summaryPosition === 'top') card.appendChild(summary);
+
+      const boxes = selectBoxes(image);
+
+      const useSidelist = C.evidenceMode === 'sidelist';
+      const below = useSidelist && C.sidelistPosition === 'below';
+      const stage = el('div', 'stage' + (below ? ' side-below' : ''));
+
+      const frame = el('div', 'frame');
+      frame.style.aspectRatio = image.image.width + ' / ' + image.image.height;
+      const img = el('img', 'photo');
+      img.src = deliveryUrl(image);
+      img.alt = image.id;
+      img.loading = 'lazy';
+      frame.appendChild(img);
+
+      const boxLayer = el('div', 'boxes');
+      const boxEls = boxes.map((f) => {
+        const b = buildBox(f, image);
+        boxLayer.appendChild(b);
+        return b;
+      });
+      frame.appendChild(boxLayer);
+      stage.appendChild(frame);
+
+      if (useSidelist) stage.appendChild(buildSidelist(boxes));
+      card.appendChild(stage);
+
+      if (C.evidenceMode === 'caption') card.appendChild(buildCaption(boxes));
+      if (summary && C.summaryPosition === 'bottom') card.appendChild(summary);
+
+      // ── 연출 (Phase D · opt-in) ──
+      if (C.enableAnimation && !reduceMotion) {
+        animateReveal(boxEls);
+        if (summary) typewriter(summary);
+      }
+      if (C.enableJitter && !reduceMotion) startJitter(boxEls);
+
+      return card;
+    }
+
+    // ── 연출 구현 ─────────────────────────────────────────────────────
+    function animateReveal(boxEls) {
+      boxEls.forEach((b, i) => {
+        b.style.opacity = '0';
+        setTimeout(() => { b.style.opacity = '1'; }, i * C.revealStagger);
+      });
+    }
+
+    function typewriter(summaryEl) {
+      const full = summaryEl.dataset.text;
+      summaryEl.innerHTML = '';
+      const caret = el('span', 'caret', '&nbsp;');
+      summaryEl.appendChild(caret);
+      // HTML(태그 포함)을 한 글자씩 드러내기 위해 텍스트/태그 토큰 단위로 진행.
+      const tokens = full.match(/<[^>]+>|[^<]/g) || [];
+      let i = 0, acc = '';
+      const tick = () => {
+        if (i >= tokens.length) { caret.remove(); return; }
+        acc += tokens[i++];
+        summaryEl.innerHTML = acc;
+        summaryEl.appendChild(caret);
+        setTimeout(tick, C.typeSpeed);
+      };
+      tick();
+    }
+
+    function startJitter(boxEls) {
+      const phase = boxEls.map(() => Math.random() * Math.PI * 2);
+      let t = 0;
+      const loop = () => {
+        t += 0.08;
+        boxEls.forEach((b, i) => {
+          const dx = Math.cos(t + phase[i]) * C.jitterAmount;
+          const dy = Math.sin(t * 1.3 + phase[i]) * C.jitterAmount;
+          b.style.transform = `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px)`;
+        });
+        requestAnimationFrame(loop);
+      };
+      requestAnimationFrame(loop);
+    }
+
+    // ── 범례 ──────────────────────────────────────────────────────────
+    function buildLegend() {
+      const L = document.getElementById('legend');
+      L.innerHTML =
+        '<span class="item"><span class="dot" style="background:#f38ba8"></span>빨강 ≥75%</span>' +
+        '<span class="item"><span class="dot" style="background:#f9e2af"></span>노랑 ≥50%</span>' +
+        '<span class="item"><span class="dot" style="background:#a6e3a1"></span>초록 &lt;50%</span>';
+    }
+
+    // ── 부트 ──────────────────────────────────────────────────────────
+    function render() {
+      applyThemeVars();
+      buildLegend();
+      const app = document.getElementById('app');
+      app.innerHTML = '';
+      for (const image of DATA.images) app.appendChild(buildCard(image));
+    }
+
+    render();
+  })();
+  </script>
+</body>
+</html>
