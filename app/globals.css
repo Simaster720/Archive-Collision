@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/*
+ * SeMA archive tone: neutral grays on white. Light only (no dark mode).
+ * Pretendard via CDN (see app/layout.tsx).
+ */
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  /* neutral grays used across sidebar / metadata blocks */
+  --border: #e5e5e5;
+  --muted: #6b7280;
+  --link: #1f4fd8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-link: var(--link);
+  --font-sans: "Pretendard Variable", Pretendard, system-ui, -apple-system,
+    "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
