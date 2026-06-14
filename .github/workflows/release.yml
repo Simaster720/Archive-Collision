@@ -1,0 +1,44 @@
+name: Release (develop → main)
+
+# ADR 0001: Vercel Hobby는 커밋 author가 오너가 아니면 프로덕션 배포를 만들지 않는다.
+# 그래서 develop에 push되면 이 액션이 "오너 PAT"로 develop을 main에 --no-ff 병합한다.
+# 새 병합 커밋의 author/committer가 오너가 되도록 PAT 계정 정보로 git을 설정 →
+# main(=Vercel 프로덕션 브랜치)에 오너 명의 커밋이 들어가 자동 배포된다.
+# 배포 자체는 Vercel 네이티브 Git 연동이 수행한다(이 액션은 Vercel CLI를 쓰지 않음).
+
+on:
+  push:
+    branches: [develop]
+
+# main 병합이 겹치지 않도록 직렬화
+concurrency:
+  group: release-develop-to-main
+  cancel-in-progress: false
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (full history, owner PAT)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.OWNER_PAT }}
+
+      - name: Set git identity to repo owner (from PAT)
+        env:
+          OWNER_PAT: ${{ secrets.OWNER_PAT }}
+        run: |
+          user_json=$(curl -fsS -H "Authorization: token $OWNER_PAT" https://api.github.com/user)
+          login=$(echo "$user_json" | jq -r .login)
+          uid=$(echo "$user_json" | jq -r .id)
+          git config user.name "$login"
+          # noreply 주소는 오너 GitHub 계정에 매핑됨 → Vercel이 오너 커밋으로 인식
+          git config user.email "${uid}+${login}@users.noreply.github.com"
+
+      - name: Merge develop into main and push
+        run: |
+          git checkout main
+          # --no-ff: 항상 오너 명의의 새 병합 커밋이 main tip이 되도록(배포 트리거 보장)
+          git merge --no-ff origin/develop -m "release: merge develop into main"
+          git push origin main
