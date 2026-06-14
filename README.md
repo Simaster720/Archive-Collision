@@ -45,6 +45,7 @@ docs/                    # PLAN, HANDOFF, ADR, DEPLOY, ISSUES
 
 ## 문서
 
+- [docs/RESULT.md](docs/RESULT.md) — 작업 결과 보고서(완료 현황·검증·구조)
 - [docs/PLAN.md](docs/PLAN.md) — 작업 계획(스택·데이터 모델·라우팅·6단계)
 - [CONTEXT.md](CONTEXT.md) — 도메인 용어 글로서리
 - [docs/DEPLOY.md](docs/DEPLOY.md) — Vercel + develop→main 자동 배포
