@@ -26,6 +26,29 @@ export interface FileImage {
   ext: string;
 }
 
+// AI verdict (CONTEXT.md / PLAN §3). Curated at build time from
+// data/source/eval_results.xlsx; coordinates are ORIGINAL pixels (pre-jitter —
+// the jitter is a client-only display effect, ADR 0003).
+export interface VerdictBox {
+  label: string; // short English label (e.g. "VIGNETTE")
+  titleKo: string; // original Korean feature name
+  scorePct: number; // suspicion % (0~100)
+  color: string; // threshold-based color (#FF1F1F / #FF9500 / #00E85F)
+  description: string; // evidence sentence
+  x1: number;
+  y1: number;
+  x2: number;
+  y2: number;
+}
+
+export interface AiVerdict {
+  imageWidth: number;
+  imageHeight: number;
+  finalScore: number; // 0~100
+  judgement: "ai" | "real"; // finalScore >= 50 ? "ai" : "real" (D8)
+  boxes: VerdictBox[]; // curated ~6 (selected / sorted / penalized)
+}
+
 export interface FileItem {
   id: string;
   fileName: string;
@@ -36,7 +59,7 @@ export interface FileItem {
   content: string | null;
   meta: FileMeta;
   image: FileImage;
-  ai: null; // ★ reserved — AI verdict wired later (PLAN §7)
+  ai: AiVerdict | null; // null when eval data missing (build never breaks)
 }
 
 export interface Subseries {

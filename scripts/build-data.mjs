@@ -22,10 +22,12 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseRegistration } from "./lib/filename.mjs";
 import { fetchSheetRows } from "./lib/sheets.mjs";
+import { loadEvalVerdicts } from "./lib/eval.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const OUT_FILE = join(ROOT, "data", "collection.json");
 const SUBSERIES_NAMES_FILE = join(ROOT, "data", "subseries-names.json");
+const EVAL_FILE = join(ROOT, "data", "source", "eval_results.xlsx");
 
 const COLLECTION = { code: "C", name: "신수찬 컬렉션" };
 
@@ -67,6 +69,24 @@ function resolveNames(tree, namesMap) {
           files: sub.files.map((f) => ({ ...f, subseries: { ...f.subseries, name } })),
         };
       }),
+    })),
+  };
+}
+
+/**
+ * Merge curated AI verdicts into every file (immutable). Eval source is a
+ * committed local xlsx, so this works from either tree (live sheet or committed
+ * snapshot). Files with no eval row keep `ai: null` (HANDOFF §2.4).
+ */
+function attachVerdicts(tree, evalMap) {
+  return {
+    ...tree,
+    series: tree.series.map((s) => ({
+      ...s,
+      subseries: s.subseries.map((sub) => ({
+        ...sub,
+        files: sub.files.map((f) => ({ ...f, ai: evalMap.get(f.id) ?? null })),
+      })),
     })),
   };
 }
@@ -252,8 +272,10 @@ async function main() {
   const sheetId = process.env.GOOGLE_SHEET_ID;
   const isCI = Boolean(process.env.CI || process.env.VERCEL);
 
-  // Names come from a committed local file, so both paths resolve them the same.
+  // Names + AI verdicts come from committed local files, so both the live-sheet
+  // and offline paths derive them identically (no network needed for either).
   const namesMap = loadSubseriesNames();
+  const evalMap = loadEvalVerdicts(EVAL_FILE);
 
   // D4: without a key, CI/Vercel must fail loudly (no silent stale data);
   // local dev falls back to the committed snapshot so offline work isn't blocked.
@@ -271,9 +293,10 @@ async function main() {
       );
     }
     // Offline: keep the committed metadata snapshot, but re-resolve subseries
-    // names from the local map (no sheet needed). Deterministic → idempotent.
+    // names + AI verdicts from the local sources (no sheet needed).
+    // Deterministic → idempotent.
     const committed = JSON.parse(readFileSync(OUT_FILE, "utf8"));
-    const tree = resolveNames(committed, namesMap);
+    const tree = attachVerdicts(resolveNames(committed, namesMap), evalMap);
     writeFileSync(OUT_FILE, JSON.stringify(tree, null, 2) + "\n", "utf8");
     console.log(
       `[build-data] no GOOGLE_SHEETS_API_KEY — kept committed metadata, refreshed names from local sources.`,
@@ -287,7 +310,7 @@ async function main() {
   const sheets = await fetchSheetRows(sheetId, key);
   const formatDate = (value) => formatExcelDate(value, false);
   const files = dedupeById(readFilesFromSheets(sheets, formatDate));
-  const tree = resolveNames(buildTree(files), namesMap);
+  const tree = attachVerdicts(resolveNames(buildTree(files), namesMap), evalMap);
 
   writeFileSync(OUT_FILE, JSON.stringify(tree, null, 2) + "\n", "utf8");
   logSummary(tree);
