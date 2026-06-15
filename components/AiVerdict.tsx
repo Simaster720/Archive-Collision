@@ -17,6 +17,14 @@ const JITTER_PCT = 1.2; // 좌/우 모서리 독립 최대 ± (이미지 폭 %)
 const WIDE_THRESHOLD_PCT = 90; // 이 폭(%) 이상이면 near-full-width
 const WIDE_ATTEN = 0.3; // near-full-width 박스 지터 감쇄
 
+// 연출 타이밍 (D6/D7). 정밀 튜닝 대상 — 시각 검토로 조정 가능(PLAN P4).
+const THINK_MS = 2000; // 근거 thinking 인디케이터 표시(~2–3초)
+const TYPE_MS = 16; // 타이핑 1틱 간격
+const TYPE_CHARS = 1; // 틱당 글자 수
+const ROW_GAP_MS = 160; // 다음 근거 행으로 넘어가는 간격
+
+type Phase = "think" | "stream" | "done";
+
 type Geom = { left: number; top: number; width: number; height: number };
 
 const r3 = (n: number) => Math.round(n * 1000) / 1000; // sub-pixel, clean markup
@@ -73,6 +81,51 @@ export default function AiVerdict({
   useEffect(() => {
     setGeoms(bases.map(jitter));
   }, [bases]);
+
+  // 근거 연출(D6/D7): thinking ~2초 → 위→아래 순차(행 라벨/% 즉시, 설명 타이핑).
+  // 매 마운트 1회·루프 없음. reduced-motion이면 thinking·타이핑 생략 즉시 완성.
+  // 박스+요약%는 이 phase와 무관하게 항상 즉시 표시된다.
+  const [phase, setPhase] = useState<Phase>("think");
+  const [cursor, setCursor] = useState({ row: 0, char: 0 });
+  useEffect(() => {
+    const reduce =
+      typeof window !== "undefined" &&
+      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    if (reduce || boxes.length === 0) {
+      setPhase("done");
+      return;
+    }
+
+    setPhase("think");
+    setCursor({ row: 0, char: 0 });
+    const timers: ReturnType<typeof setTimeout>[] = [];
+
+    timers.push(
+      setTimeout(() => {
+        setPhase("stream");
+        let row = 0;
+        let char = 0;
+        const tick = () => {
+          const desc = boxes[row]?.description ?? "";
+          if (char < desc.length) {
+            char = Math.min(desc.length, char + TYPE_CHARS);
+            setCursor({ row, char });
+            timers.push(setTimeout(tick, TYPE_MS));
+          } else if (row + 1 < boxes.length) {
+            row += 1;
+            char = 0;
+            setCursor({ row, char });
+            timers.push(setTimeout(tick, ROW_GAP_MS));
+          } else {
+            setPhase("done");
+          }
+        };
+        timers.push(setTimeout(tick, 0));
+      }, THINK_MS),
+    );
+
+    return () => timers.forEach(clearTimeout);
+  }, [boxes]);
 
   return (
     <section aria-label="AI 판별" className="mt-10">
@@ -149,37 +202,64 @@ export default function AiVerdict({
         </div>
       </div>
 
-      {/* ③ 판별 근거 (하단 풀폭) */}
+      {/* ③ 판별 근거 (하단 풀폭) — thinking → 위→아래 순차 타이핑 */}
       <div className="mt-6">
         <h3 className="mb-3 text-[11px] font-semibold uppercase tracking-wider text-muted">
           판별 근거
         </h3>
-        <ol className="divide-y divide-border">
-          {boxes.map((b, i) => (
-            <li key={`ev-${b.label}-${i}`} className="flex gap-3 py-2.5">
-              <span
-                aria-hidden
-                className="mt-1 h-3.5 w-3.5 shrink-0 rounded-[3px] border border-black/10"
-                style={{ backgroundColor: b.color }}
-              />
-              <div className="min-w-0">
-                <div className="flex items-baseline gap-2">
-                  <span className="font-medium text-foreground">
-                    {b.titleKo || b.label}
-                  </span>
-                  <span className="font-mono text-xs tabular-nums text-muted">
-                    {b.scorePct}%
-                  </span>
-                </div>
-                {b.description && (
-                  <p className="mt-0.5 text-sm leading-relaxed text-foreground/75">
-                    {b.description}
-                  </p>
-                )}
-              </div>
-            </li>
-          ))}
-        </ol>
+
+        {phase === "think" ? (
+          <div className="flex items-center gap-2 py-3 text-sm text-muted">
+            <span aria-hidden className="inline-flex gap-1">
+              <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-muted [animation-delay:-0.3s]" />
+              <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-muted [animation-delay:-0.15s]" />
+              <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-muted" />
+            </span>
+            <span className="animate-pulse">판별 근거를 분석하는 중…</span>
+          </div>
+        ) : (
+          <ol className="divide-y divide-border">
+            {boxes.map((b, i) => {
+              const done = phase === "done";
+              if (!done && i > cursor.row) return null; // 아직 등장 전
+              const typing = !done && i === cursor.row;
+              const text =
+                done || i < cursor.row
+                  ? b.description
+                  : b.description.slice(0, cursor.char);
+              return (
+                <li key={`ev-${b.label}-${i}`} className="flex gap-3 py-2.5">
+                  <span
+                    aria-hidden
+                    className="mt-1 h-3.5 w-3.5 shrink-0 rounded-[3px] border border-black/10"
+                    style={{ backgroundColor: b.color }}
+                  />
+                  <div className="min-w-0">
+                    <div className="flex items-baseline gap-2">
+                      <span className="font-medium text-foreground">
+                        {b.titleKo || b.label}
+                      </span>
+                      <span className="font-mono text-xs tabular-nums text-muted">
+                        {b.scorePct}%
+                      </span>
+                    </div>
+                    {b.description && (
+                      <p className="mt-0.5 text-sm leading-relaxed text-foreground/75">
+                        {text}
+                        {typing && (
+                          <span
+                            aria-hidden
+                            className="ml-px inline-block h-3.5 w-0.5 translate-y-0.5 animate-pulse bg-foreground/60 align-middle"
+                          />
+                        )}
+                      </p>
+                    )}
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
+        )}
       </div>
     </section>
   );
