@@ -1,9 +1,11 @@
 import { detailUrl } from "@/lib/cloudinary";
-import AiVerdictSlot from "./AiVerdictSlot";
+import AiVerdict from "./AiVerdict";
 import type { FileItem } from "@/lib/types";
 
 // 정보창 (기획서 p.4-7): 서브시리즈명 → [F] 제목 → 구분선 → 메타데이터(└ 5필드)
-// → 자료 내용 → 원본 이미지(중앙) → AI 판별(예약). SeMA 톤.
+// → 자료 내용 → AI 판별(박스 오버레이 이미지 + 근거). SeMA 톤.
+// D4: 별도 원본 figure는 제거 — 판별 카드의 오버레이 이미지가 그 자리를 대신한다.
+// eval 누락 자료(file.ai = null)만 폴백으로 원본 이미지를 평이하게 보여준다.
 
 function metaFields(file: FileItem) {
   return [
@@ -67,22 +69,28 @@ export default function FileDetail({
         </section>
       )}
 
-      {/* 원본 파일 이미지 — 가운데 정렬 (기획서 p.5) */}
-      <figure className="my-8 flex justify-center">
-        {/* eslint-disable-next-line @next/next/no-img-element -- Cloudinary already
-            optimizes (f_auto/q_auto); intrinsic dims unknown so a plain img avoids
-            forcing an aspect ratio. */}
-        <img
-          src={detailUrl(file.image.publicId, 1600)}
+      {/* AI 판별 — 박스 오버레이 이미지 + 근거 (file.ai 있을 때).
+          없으면(eval 누락) 원본 이미지만 폴백으로 표시. */}
+      {file.ai ? (
+        <AiVerdict
+          verdict={file.ai}
+          publicId={file.image.publicId}
           alt={file.title ?? file.id}
-          className="max-h-[78vh] w-auto max-w-full object-contain"
-          loading="lazy"
-          decoding="async"
         />
-      </figure>
-
-      {/* AI 판별 — 보류(자리만) */}
-      <AiVerdictSlot />
+      ) : (
+        <figure className="my-8 flex justify-center">
+          {/* eslint-disable-next-line @next/next/no-img-element -- Cloudinary already
+              optimizes (f_auto/q_auto); intrinsic dims unknown so a plain img avoids
+              forcing an aspect ratio. */}
+          <img
+            src={detailUrl(file.image.publicId, 1600)}
+            alt={file.title ?? file.id}
+            className="max-h-[78vh] w-auto max-w-full object-contain"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      )}
     </article>
   );
 }
