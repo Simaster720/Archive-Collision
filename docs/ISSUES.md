@@ -29,3 +29,14 @@
 - **상태**: ✅ **구현 완료 (2026-06-15)** — Phase 1(파이프라인 전환: [scripts/lib/sheets.mjs](../scripts/lib/sheets.mjs) + [build-data.mjs](../scripts/build-data.mjs) 입력부) + D11 메타 스키마(`전자여부`→`분량`) + Phase 2(새로고침 버튼: [app/api/refresh/route.ts](../app/api/refresh/route.ts)·[app/refresh/page.tsx](../app/refresh/page.tsx)) 구현·로컬 검증 완료. 배포는 **Vercel env(Production·Preview)에 키 설정 후** develop push.
 - **내용**: 최종본 확정 전까지 엑셀이 계속 수정되므로, Google Sheets를 단일 소스로 두고 웹이 빌드타임에 조회해 표기. SSG 유지 + Sheets API(API 키) + 새로고침 버튼(Deploy Hook). 기준 데이터는 `신수찬 콜렉션_0614_수정.xlsx`(시트 이관본).
 - **상세 문서**: [이슈](./ISSUE-gsheets-data-source.md) · [계획](./PLAN-gsheets-data-source.md) · [핸드오프](./HANDOFF-gsheets.md) · [ADR 0002](./adr/0002-gsheets-buildtime-data-source.md)
+
+---
+
+## 4. 전폭(full-width) 트래킹 박스를 이미지당 최대 1개로 제한 (확정본 대비 변경)
+
+- **상태**: 적용됨 (2026-06-15, 클라이언트 확인) · **되돌릴 수 있음** — 추후 요청 시 확정본 동작으로 복귀 가능
+- **관련**: [PLAN-ai-verdict-0615 §6 DoD](./PLAN-ai-verdict-0615.md) · [CONTEXT.md 트래킹 박스](../CONTEXT.md) · [scripts/lib/ai-verdict.mjs](../scripts/lib/ai-verdict.mjs)
+- **전폭 박스란**: width가 이미지 폭의 ~90% 이상이라 이미지를 가로지르는 **띠(band)** 모양 박스(예: 위·아래 가장자리 비네팅/색수차 띠). eval 데이터의 평가항목 다수가 "전체화면 영역"이라 이렇게 나온다. 작은(지점) 박스와 달리 여러 개 쌓이면 "줄무늬"처럼 보여 탐지 포인트가 흐려진다.
+- **내용**: main 확정본 `selectBoxes`의 **"부족 시 완화 충전" 루프**가 `maxEdgeWideBoxes: 1` 캡을 건너뛰어, 198장 중 **5장**(`S1_SS2_02`·`S1_SS5_05`·`S1_SS11_06`(3개)·`S2_SS1_07`·`S3_SS2_08`)에서 전폭 박스가 2~3개 노출됐다. 이 5장은 작가 확정 데모 5장에 포함되지 않아 검토되지 않음.
+- **결정**: DoD "전폭 박스 ≤1"을 충족하도록 **완화 충전 루프에서 전폭(가로 띠, wr≥0.9) 박스를 최대 1개로 캡**. 가로 띠만 대상으로 하므로 세로 띠·큰 박스는 영향 없음 → **작가 확정 데모 5장(S3_SS2_05 등)은 데모와 동일하게 유지**(검증: S3_SS2_05의 세로 띠 PORE TEX 보존). 빈 슬롯은 일반 박스로 채우거나(없으면) 박스 수가 줄어든다.
+- **되돌리는 법**: [scripts/lib/ai-verdict.mjs](../scripts/lib/ai-verdict.mjs)의 `selectBoxes` 완화 충전 루프에서 `let fullWide = ...` 초기화 줄, `if (f._m.wr >= 0.9 && fullWide >= C.maxEdgeWideBoxes) continue;`, `if (f._m.wr >= 0.9) fullWide += 1;` 세 줄을 제거 → `node scripts/build-data.mjs` 재생성. 확정본(데모)과 1:1 동일 동작 복귀.

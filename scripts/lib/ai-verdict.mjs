@@ -152,11 +152,20 @@ function selectBoxes(image) {
   }
 
   // Relax overlap if we came up short.
+  // DEVIATION from the demo (intentional, ISSUES.md #4): the demo's relax-fill
+  // skipped the wide cap, so some images got 2–3 full-WIDTH bands (이미지를
+  // 가로지르는 띠). We cap full-width bands (wr ≥ 0.9) at maxEdgeWideBoxes here
+  // so "전폭 박스 ≤1" holds (DoD). Scoped to full-WIDTH only — vertical/large
+  // boxes are untouched, so the artist-confirmed demo images stay identical.
+  // Reversible — drop the isFullWidth guard + counter to restore demo behavior.
   if (picked.length < C.boxCount) {
+    let fullWide = picked.filter((p) => p._m.wr >= 0.9).length;
     for (const f of list) {
       if (picked.includes(f)) continue;
       if (picked.some((p) => overlapRatio(f, p) > 0.72)) continue;
+      if (f._m.wr >= 0.9 && fullWide >= C.maxEdgeWideBoxes) continue;
       picked.push(f);
+      if (f._m.wr >= 0.9) fullWide += 1;
       if (picked.length >= C.boxCount) break;
     }
   }
