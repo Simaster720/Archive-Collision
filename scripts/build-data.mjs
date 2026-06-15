@@ -17,7 +17,7 @@
 // Note: xlsx is still imported for XLSX.SSF.format (date serial → string).
 
 import * as XLSX from "xlsx";
-import { writeFileSync, existsSync } from "node:fs";
+import { writeFileSync, readFileSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseRegistration } from "./lib/filename.mjs";
@@ -25,8 +25,51 @@ import { fetchSheetRows } from "./lib/sheets.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const OUT_FILE = join(ROOT, "data", "collection.json");
+const SUBSERIES_NAMES_FILE = join(ROOT, "data", "subseries-names.json");
 
 const COLLECTION = { code: "C", name: "신수찬 컬렉션" };
+
+// D9: full-path "S{n}_SS{n}" → human subseries name. Keyed by full path because
+// SS codes repeat across series (every series has an SS1). The sheet's optional
+// 서브시리즈명 column still wins when present; this is the committed fallback.
+function loadSubseriesNames() {
+  try {
+    return JSON.parse(readFileSync(SUBSERIES_NAMES_FILE, "utf8"));
+  } catch (err) {
+    console.warn(`[build-data] ⚠ could not read subseries-names.json: ${err.message}`);
+    return {};
+  }
+}
+
+// Name priority (D9): sheet 서브시리즈명 column > subseries-names.json > code.
+// `existing` is whatever buildTree resolved (sheet column or the code fallback);
+// a value that still equals the code means the sheet had nothing, so the map wins.
+function resolveSubName(existing, fullKey, code, namesMap) {
+  if (existing && existing !== code) return existing;
+  return namesMap[fullKey] ?? code;
+}
+
+/**
+ * Upgrade every subseries name via the D9 mapping (immutable). Applied to the
+ * tree from either source (live sheet or committed snapshot) so the names come
+ * from the local committed map without needing the network.
+ */
+function resolveNames(tree, namesMap) {
+  return {
+    ...tree,
+    series: tree.series.map((s) => ({
+      ...s,
+      subseries: s.subseries.map((sub) => {
+        const name = resolveSubName(sub.name, `${s.code}_${sub.code}`, sub.code, namesMap);
+        return {
+          ...sub,
+          name,
+          files: sub.files.map((f) => ({ ...f, subseries: { ...f.subseries, name } })),
+        };
+      }),
+    })),
+  };
+}
 
 // Sheet header (Korean) → field. Absent headers simply yield null.
 const COL = {
@@ -209,6 +252,9 @@ async function main() {
   const sheetId = process.env.GOOGLE_SHEET_ID;
   const isCI = Boolean(process.env.CI || process.env.VERCEL);
 
+  // Names come from a committed local file, so both paths resolve them the same.
+  const namesMap = loadSubseriesNames();
+
   // D4: without a key, CI/Vercel must fail loudly (no silent stale data);
   // local dev falls back to the committed snapshot so offline work isn't blocked.
   if (!key) {
@@ -224,9 +270,15 @@ async function main() {
           "Set GOOGLE_SHEET_ID + GOOGLE_SHEETS_API_KEY in .env.local to fetch from Google Sheets.",
       );
     }
+    // Offline: keep the committed metadata snapshot, but re-resolve subseries
+    // names from the local map (no sheet needed). Deterministic → idempotent.
+    const committed = JSON.parse(readFileSync(OUT_FILE, "utf8"));
+    const tree = resolveNames(committed, namesMap);
+    writeFileSync(OUT_FILE, JSON.stringify(tree, null, 2) + "\n", "utf8");
     console.log(
-      `[build-data] no GOOGLE_SHEETS_API_KEY — keeping committed collection.json (offline dev).`,
+      `[build-data] no GOOGLE_SHEETS_API_KEY — kept committed metadata, refreshed names from local sources.`,
     );
+    logSummary(tree);
     return;
   }
 
@@ -235,7 +287,7 @@ async function main() {
   const sheets = await fetchSheetRows(sheetId, key);
   const formatDate = (value) => formatExcelDate(value, false);
   const files = dedupeById(readFilesFromSheets(sheets, formatDate));
-  const tree = buildTree(files);
+  const tree = resolveNames(buildTree(files), namesMap);
 
   writeFileSync(OUT_FILE, JSON.stringify(tree, null, 2) + "\n", "utf8");
   logSummary(tree);
