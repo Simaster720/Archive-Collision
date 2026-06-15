@@ -1,24 +1,26 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { detailUrl } from "@/lib/cloudinary";
 import type { AiVerdict as AiVerdictData, VerdictBox } from "@/lib/types";
 
-// AI 판별 카드 (PLAN §3 / D2–D8). 라이트 톤(D3) 컨테이너 안에:
-//   ① 요약 % + 판정 배지 (상단, 즉시)
+// AI 판별 카드 (PLAN §3 / D2–D8 · ADR 0003 개정 2026-06-16). 라이트 톤(D3) 안에:
+//   ① 상단: "AI 판별" 제목만
 //   ② 박스 오버레이 이미지 1장 (확정 디자인 이식 — 흰 글씨/단색 라벨/2px)
-//   ③ 판별 근거 리스트 (하단 풀폭)
+//   ③ 판별 근거 (하단): 헤더 행 우측에 요약 %+판정 배지, 그 아래 설명문장 + 근거 리스트
 //
-// 박스 좌표는 원본 px(지터 전). 지터는 표시 전용이며 클라이언트에서 매 마운트마다
-// 재생성한다(ADR 0003) — 데이터에 저장하지 않는다.
+// 연출 타임라인(#1·#2): 이미지 onLoad 게이트 → 5초 분석 대기(박스 숨김·"분석 중" 스피너)
+//   → 박스 일괄 등장 + 근거 타이핑 + 요약/배지/설명문장 reveal. 박스는 등장 후 고정(이동 없음),
+//   조회마다 다른 모양(per-mount 지터)만 유지한다.
+// 박스 좌표는 원본 px(지터 전). 지터는 표시 전용이며 데이터에 저장하지 않는다(ADR 0003).
 
 const EDGE_INSET_PX = 8; // 가장자리 박스 안쪽 여유 (CONFIG.edgeInsetPx)
 const JITTER_PCT = 1.2; // 좌/우 모서리 독립 최대 ± (이미지 폭 %)
 const WIDE_THRESHOLD_PCT = 90; // 이 폭(%) 이상이면 near-full-width
 const WIDE_ATTEN = 0.3; // near-full-width 박스 지터 감쇄
 
-// 연출 타이밍 (D6/D7). 정밀 튜닝 대상 — 시각 검토로 조정 가능(PLAN P4).
-const THINK_MS = 2000; // 근거 thinking 인디케이터 표시(~2–3초)
+// 연출 타이밍 (D6/D7 · ADR 0003 개정). 정밀 튜닝 대상 — 시각 검토로 조정.
+const THINK_MS = 5000; // onLoad 후 분석 대기 — 이 동안 박스 숨김, "분석 중" 스피너
 const TYPE_MS = 16; // 타이핑 1틱 간격
 const TYPE_CHARS = 1; // 틱당 글자 수
 const ROW_GAP_MS = 160; // 다음 근거 행으로 넘어가는 간격
@@ -75,16 +77,22 @@ export default function AiVerdict({
     [boxes, imageWidth, imageHeight],
   );
 
-  // 지터는 클라이언트 마운트 후 적용 → SSR/첫 페인트는 원본 좌표(하이드레이션 일치),
-  // 직후 매 마운트마다 재랜덤(ADR 0003: 재진입마다 다른 모양).
+  // 지터(ADR 0003): 마운트마다 1회 재랜덤 — 조회마다 다른 모양. 등장 후엔 고정(이동 없음).
   const [geoms, setGeoms] = useState<Geom[]>(bases);
   useEffect(() => {
     setGeoms(bases.map(jitter));
   }, [bases]);
 
-  // 근거 연출(D6/D7): thinking ~2초 → 위→아래 순차(행 라벨/% 즉시, 설명 타이핑).
-  // 매 마운트 1회·루프 없음. reduced-motion이면 thinking·타이핑 생략 즉시 완성.
-  // 박스+요약%는 이 phase와 무관하게 항상 즉시 표시된다.
+  // 이미지 onLoad 게이트(#1): 박스·연출은 이미지가 실제로 페인트된 뒤에만 시작한다.
+  // 캐시된 이미지는 onLoad가 안 뜰 수 있어 마운트 시 .complete를 직접 확인한다.
+  const imgRef = useRef<HTMLImageElement>(null);
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    if (imgRef.current?.complete) setLoaded(true);
+  }, []);
+
+  // 판별 연출(ADR 0003 개정): onLoad → THINK_MS 분석 대기 → 박스 일괄 등장과 동시에
+  // 타이핑 시작. 박스는 stream 동안 연속 이동, done에서 정착. reduced-motion이면 생략.
   const [phase, setPhase] = useState<Phase>("think");
   const [cursor, setCursor] = useState({ row: 0, char: 0 });
   useEffect(() => {
@@ -95,6 +103,7 @@ export default function AiVerdict({
       setPhase("done");
       return;
     }
+    if (!loaded) return; // 이미지 로드 전 — "분석 중" 스피너 유지, 박스 숨김
 
     setPhase("think");
     setCursor({ row: 0, char: 0 });
@@ -125,42 +134,16 @@ export default function AiVerdict({
     );
 
     return () => timers.forEach(clearTimeout);
-  }, [boxes]);
+  }, [boxes, loaded]);
+
+  // 요약 %·판정 배지·설명문장·박스를 같은 시점(박스 등장)에 동시에 드러낸다.
+  const revealed = loaded && phase !== "think";
 
   return (
     <section aria-label="AI 판별" className="mt-10">
-      {/* ① 요약 + 판정 배지 (즉시) */}
-      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border pb-3">
-        <h2 className="text-sm font-semibold tracking-tight text-foreground">
-          AI 판별
-        </h2>
-        <div className="flex items-baseline gap-3">
-          <span
-            className="font-mono text-2xl font-bold tabular-nums"
-            style={{ color: isAi ? "#d11" : "#0a8a4a" }}
-          >
-            {finalScore}%
-          </span>
-          <span
-            className="rounded-full border px-2.5 py-0.5 text-xs font-medium"
-            style={{
-              color: isAi ? "#d11" : "#0a8a4a",
-              borderColor: isAi ? "#d11" : "#0a8a4a",
-            }}
-          >
-            {isAi ? "AI 생성 의심" : "실제"}
-          </span>
-        </div>
-      </div>
-      <p className="mt-2 text-xs text-muted">
-        {isAi
-          ? `이 이미지는 ${finalScore}% 정도 생성된 것으로 의심됩니다.`
-          : `이 이미지는 실제로 촬영된 것으로 보입니다 (의심도 ${finalScore}%).`}
-      </p>
-
-      {/* ② 박스 오버레이 이미지 1장 */}
+      {/* ① 박스 오버레이 이미지 1장 — 박스는 onLoad + THINK_MS 후 일괄 등장 */}
       <div
-        className="relative mx-auto mt-4 w-full overflow-hidden rounded-md bg-neutral-100"
+        className="relative mx-auto w-full overflow-hidden rounded-md bg-neutral-100"
         style={{
           aspectRatio: `${imageWidth} / ${imageHeight}`,
           maxWidth: `${(imageWidth / imageHeight) * 80}vh`,
@@ -169,44 +152,77 @@ export default function AiVerdict({
         {/* eslint-disable-next-line @next/next/no-img-element -- Cloudinary
             optimizes (f_auto/q_auto); boxes are %-positioned over this frame. */}
         <img
+          ref={imgRef}
           src={detailUrl(publicId, 1600)}
           alt={alt}
           className="block h-auto w-full"
           loading="lazy"
           decoding="async"
+          onLoad={() => setLoaded(true)}
         />
-        <div className="pointer-events-none absolute inset-0">
-          {boxes.map((b, i) => {
-            const g = geoms[i] ?? bases[i];
-            return (
-              <div
-                key={`${b.label}-${i}`}
-                className="absolute border-2 border-solid transition-[left,width] duration-200 ease-out"
-                style={{
-                  left: `${g.left}%`,
-                  top: `${g.top}%`,
-                  width: `${g.width}%`,
-                  height: `${g.height}%`,
-                  borderColor: b.color,
-                }}
-              >
-                <span
-                  className="absolute -left-px -top-px whitespace-nowrap rounded-[3px] px-1.5 py-px font-mono text-[11px] leading-tight text-white"
-                  style={{ backgroundColor: b.color }}
+        {revealed && (
+          <div className="pointer-events-none absolute inset-0">
+            {boxes.map((b, i) => {
+              const g = geoms[i] ?? bases[i];
+              return (
+                <div
+                  key={`${b.label}-${i}`}
+                  className="absolute border-2 border-solid"
+                  style={{
+                    left: `${g.left}%`,
+                    top: `${g.top}%`,
+                    width: `${g.width}%`,
+                    height: `${g.height}%`,
+                    borderColor: b.color,
+                  }}
                 >
-                  {b.label} | {b.scorePct}%
-                </span>
-              </div>
-            );
-          })}
-        </div>
+                  <span
+                    className="absolute -left-px -top-px whitespace-nowrap rounded-[3px] px-1.5 py-px font-mono text-[11px] leading-tight text-white"
+                    style={{ backgroundColor: b.color }}
+                  >
+                    {b.label} | {b.scorePct}%
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
 
-      {/* ③ 판별 근거 (하단 풀폭) — thinking → 위→아래 순차 타이핑 */}
+      {/* ② 판별 근거 (하단) — 헤더 행 우측에 요약 %+배지(#3), 아래 설명문장 + 리스트 */}
       <div className="mt-6">
-        <h3 className="mb-3 text-[11px] font-semibold uppercase tracking-wider text-muted">
-          판별 근거
-        </h3>
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border pb-3">
+          <h3 className="text-[11px] font-semibold uppercase tracking-wider text-muted">
+            판별 근거
+          </h3>
+          {revealed && (
+            <div className="flex items-baseline gap-3">
+              <span
+                className="font-mono text-2xl font-bold tabular-nums"
+                style={{ color: isAi ? "#d11" : "#0a8a4a" }}
+              >
+                {finalScore}%
+              </span>
+              <span
+                className="rounded-full border px-2.5 py-0.5 text-xs font-medium"
+                style={{
+                  color: isAi ? "#d11" : "#0a8a4a",
+                  borderColor: isAi ? "#d11" : "#0a8a4a",
+                }}
+              >
+                {isAi ? "AI 생성 의심" : "실제"}
+              </span>
+            </div>
+          )}
+        </div>
+
+        {revealed && (
+          <p className="mt-3 text-xs text-muted">
+            {isAi
+              ? `이 이미지는 ${finalScore}% 정도 생성된 것으로 의심됩니다.`
+              : `이 이미지는 실제로 촬영된 것으로 보입니다 (의심도 ${finalScore}%).`}
+          </p>
+        )}
 
         {phase === "think" ? (
           <div className="flex items-center gap-2 py-3 text-sm text-muted">
@@ -218,7 +234,7 @@ export default function AiVerdict({
             <span className="animate-pulse">판별 근거를 분석하는 중…</span>
           </div>
         ) : (
-          <ol className="divide-y divide-border">
+          <ol className="mt-3 divide-y divide-border">
             {boxes.map((b, i) => {
               const done = phase === "done";
               if (!done && i > cursor.row) return null; // 아직 등장 전
