@@ -219,7 +219,7 @@
               "ai": {
                 "imageWidth": 5712,
                 "imageHeight": 4284,
-                "finalScore": 15,
+                "finalScore": 16,
                 "judgement": "real",
                 "boxes": [
                   {
@@ -356,7 +356,7 @@
               "ai": {
                 "imageWidth": 1945,
                 "imageHeight": 1117,
-                "finalScore": 60,
+                "finalScore": 79,
                 "judgement": "ai",
                 "boxes": [
                   {
@@ -384,8 +384,8 @@
                   {
                     "label": "CA",
                     "titleKo": "색수차",
-                    "scorePct": 0,
-                    "color": "#00E85F",
+                    "scorePct": 50,
+                    "color": "#FF9500",
                     "description": "색수차 없음 (실제 렌즈는 색수차 발생하지만 AI는 광학 왜곡이 없음)",
                     "x1": 0,
                     "y1": 0,
@@ -421,13 +421,13 @@
               "ai": {
                 "imageWidth": 1440,
                 "imageHeight": 1024,
-                "finalScore": 63,
+                "finalScore": 61,
                 "judgement": "ai",
                 "boxes": [
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 100,
+                    "scorePct": 95,
                     "color": "#FF1F1F",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 1074,
@@ -438,7 +438,7 @@
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 100,
+                    "scorePct": 95,
                     "color": "#FF1F1F",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 360,
@@ -449,7 +449,7 @@
                   {
                     "label": "VIGNETTE",
                     "titleKo": "비네팅",
-                    "scorePct": 100,
+                    "scorePct": 95,
                     "color": "#FF1F1F",
                     "description": "비네팅 없음 (실제 렌즈는 가장자리가 어두워지는 비네팅이 생김)",
                     "x1": 0,
@@ -486,14 +486,14 @@
               "ai": {
                 "imageWidth": 1440,
                 "imageHeight": 1024,
-                "finalScore": 62,
+                "finalScore": 61,
                 "judgement": "ai",
                 "boxes": [
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 93,
-                    "color": "#FF1F1F",
+                    "scorePct": 71,
+                    "color": "#FF9500",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 1056,
                     "y1": 808,
@@ -501,20 +501,9 @@
                     "y2": 920
                   },
                   {
-                    "label": "VIGNETTE",
-                    "titleKo": "비네팅",
-                    "scorePct": 100,
-                    "color": "#FF1F1F",
-                    "description": "비네팅 없음 (실제 렌즈는 가장자리가 어두워지는 비네팅이 생김)",
-                    "x1": 0,
-                    "y1": 0,
-                    "x2": 1440,
-                    "y2": 256
-                  },
-                  {
                     "label": "MICRO TEX",
                     "titleKo": "마이크로 텍스처",
-                    "scorePct": 74,
+                    "scorePct": 67,
                     "color": "#FF9500",
                     "description": "마이크로 텍스처 부재 (피부결·직물결·종이질감 같은 미세 요소 없음)",
                     "x1": 0,
@@ -523,9 +512,20 @@
                     "y2": 421
                   },
                   {
+                    "label": "VIGNETTE",
+                    "titleKo": "비네팅",
+                    "scorePct": 75,
+                    "color": "#FF1F1F",
+                    "description": "비네팅 없음 (실제 렌즈는 가장자리가 어두워지는 비네팅이 생김)",
+                    "x1": 0,
+                    "y1": 0,
+                    "x2": 1440,
+                    "y2": 256
+                  },
+                  {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 57,
+                    "scorePct": 53,
                     "color": "#FF9500",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 360,
@@ -562,41 +562,30 @@
               "ai": {
                 "imageWidth": 1440,
                 "imageHeight": 1024,
-                "finalScore": 56,
+                "finalScore": 50,
                 "judgement": "ai",
                 "boxes": [
                   {
-                    "label": "HALO",
-                    "titleKo": "헤일로 아티팩트",
-                    "scorePct": 100,
-                    "color": "#FF1F1F",
-                    "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
-                    "x1": 0,
-                    "y1": 462,
-                    "x2": 1440,
-                    "y2": 1024
-                  },
-                  {
-                    "label": "HIGHLIGHT",
-                    "titleKo": "반사 하이라이트",
-                    "scorePct": 0,
-                    "color": "#00E85F",
-                    "description": "반사 하이라이트가 비정상적으로 원형 (AI의 광원 반사 표현 인위성)",
-                    "x1": 1385,
-                    "y1": 29,
-                    "x2": 1392,
-                    "y2": 35
-                  },
-                  {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 50,
-                    "color": "#FF9500",
+                    "scorePct": 26,
+                    "color": "#00E85F",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 360,
                     "y1": 256,
                     "x2": 1080,
                     "y2": 768
+                  },
+                  {
+                    "label": "FG/BG",
+                    "titleKo": "배경/전경 복잡도",
+                    "scorePct": 36,
+                    "color": "#00E85F",
+                    "description": "배경이 전경만큼 선명 (실제 카메라 보케 효과 없음)",
+                    "x1": 0,
+                    "y1": 0,
+                    "x2": 1440,
+                    "y2": 204
                   }
                 ]
               }
@@ -627,14 +616,14 @@
               "ai": {
                 "imageWidth": 1440,
                 "imageHeight": 1024,
-                "finalScore": 58,
+                "finalScore": 51,
                 "judgement": "ai",
                 "boxes": [
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 100,
-                    "color": "#FF1F1F",
+                    "scorePct": 50,
+                    "color": "#FF9500",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 360,
                     "y1": 256,
@@ -644,8 +633,8 @@
                   {
                     "label": "VIGNETTE",
                     "titleKo": "비네팅",
-                    "scorePct": 100,
-                    "color": "#FF1F1F",
+                    "scorePct": 50,
+                    "color": "#FF9500",
                     "description": "비네팅 없음 (실제 렌즈는 가장자리가 어두워지는 비네팅이 생김)",
                     "x1": 0,
                     "y1": 0,
@@ -655,7 +644,7 @@
                   {
                     "label": "MICRO TEX",
                     "titleKo": "마이크로 텍스처",
-                    "scorePct": 24,
+                    "scorePct": 12,
                     "color": "#00E85F",
                     "description": "마이크로 텍스처 부재 (피부결·직물결·종이질감 같은 미세 요소 없음)",
                     "x1": 1281,
@@ -703,13 +692,13 @@
               "ai": {
                 "imageWidth": 651,
                 "imageHeight": 931,
-                "finalScore": 58,
+                "finalScore": 59,
                 "judgement": "ai",
                 "boxes": [
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 100,
+                    "scorePct": 85,
                     "color": "#FF1F1F",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 12,
@@ -720,7 +709,7 @@
                   {
                     "label": "FG/BG",
                     "titleKo": "배경/전경 복잡도",
-                    "scorePct": 100,
+                    "scorePct": 80,
                     "color": "#FF1F1F",
                     "description": "배경이 전경만큼 선명 (실제 카메라 보케 효과 없음)",
                     "x1": 0,
@@ -731,8 +720,8 @@
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 51,
-                    "color": "#FF9500",
+                    "scorePct": 45,
+                    "color": "#00E85F",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 162,
                     "y1": 232,
@@ -775,14 +764,14 @@
               "ai": {
                 "imageWidth": 4032,
                 "imageHeight": 3024,
-                "finalScore": 20,
+                "finalScore": 14,
                 "judgement": "real",
                 "boxes": [
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 100,
-                    "color": "#FF1F1F",
+                    "scorePct": 55,
+                    "color": "#FF9500",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 1714,
                     "y1": 0,
@@ -792,7 +781,7 @@
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 30,
+                    "scorePct": 20,
                     "color": "#00E85F",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 1008,
@@ -803,8 +792,8 @@
                   {
                     "label": "CA FIELD",
                     "titleKo": "색수차 공간 분포",
-                    "scorePct": 77,
-                    "color": "#FF1F1F",
+                    "scorePct": 43,
+                    "color": "#00E85F",
                     "description": "색수차가 공간적으로 균일 (실제 렌즈는 위치마다 색수차 분포 다름)",
                     "x1": 0,
                     "y1": 0,
@@ -840,14 +829,14 @@
               "ai": {
                 "imageWidth": 491,
                 "imageHeight": 530,
-                "finalScore": 61,
+                "finalScore": 53,
                 "judgement": "ai",
                 "boxes": [
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 100,
-                    "color": "#FF1F1F",
+                    "scorePct": 50,
+                    "color": "#FF9500",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 260,
                     "y1": 10,
@@ -894,14 +883,14 @@
               "ai": {
                 "imageWidth": 4032,
                 "imageHeight": 3024,
-                "finalScore": 14,
+                "finalScore": 6,
                 "judgement": "real",
                 "boxes": [
                   {
                     "label": "MICRO TEX",
                     "titleKo": "마이크로 텍스처",
-                    "scorePct": 88,
-                    "color": "#FF1F1F",
+                    "scorePct": 44,
+                    "color": "#00E85F",
                     "description": "마이크로 텍스처 부재 (피부결·직물결·종이질감 같은 미세 요소 없음)",
                     "x1": 1334,
                     "y1": 1080,
@@ -909,26 +898,26 @@
                     "y2": 1944
                   },
                   {
-                    "label": "FG/BG",
-                    "titleKo": "배경/전경 복잡도",
-                    "scorePct": 58,
-                    "color": "#FF9500",
-                    "description": "배경이 전경만큼 선명 (실제 카메라 보케 효과 없음)",
-                    "x1": 0,
-                    "y1": 0,
-                    "x2": 4032,
-                    "y2": 604
-                  },
-                  {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 39,
+                    "scorePct": 19,
                     "color": "#00E85F",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 2888,
                     "y1": 505,
                     "x2": 3949,
                     "y2": 1669
+                  },
+                  {
+                    "label": "FG/BG",
+                    "titleKo": "배경/전경 복잡도",
+                    "scorePct": 29,
+                    "color": "#00E85F",
+                    "description": "배경이 전경만큼 선명 (실제 카메라 보케 효과 없음)",
+                    "x1": 0,
+                    "y1": 0,
+                    "x2": 4032,
+                    "y2": 604
                   }
                 ]
               }
@@ -966,13 +955,13 @@
               "ai": {
                 "imageWidth": 1315,
                 "imageHeight": 728,
-                "finalScore": 66,
+                "finalScore": 60,
                 "judgement": "ai",
                 "boxes": [
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 100,
+                    "scorePct": 90,
                     "color": "#FF1F1F",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 436,
@@ -983,13 +972,24 @@
                   {
                     "label": "CA",
                     "titleKo": "색수차",
-                    "scorePct": 100,
+                    "scorePct": 85,
                     "color": "#FF1F1F",
                     "description": "색수차 없음 (실제 렌즈는 색수차 발생하지만 AI는 광학 왜곡이 없음)",
                     "x1": 0,
                     "y1": 0,
                     "x2": 1315,
                     "y2": 72
+                  },
+                  {
+                    "label": "TEXT BLUR",
+                    "titleKo": "텍스트 블러",
+                    "scorePct": 0,
+                    "color": "#00E85F",
+                    "description": "텍스트 영역이 비정상적으로 흐릿하거나 깨짐 (AI의 텍스트 표현 한계)",
+                    "x1": 519,
+                    "y1": 309,
+                    "x2": 875,
+                    "y2": 410
                   }
                 ]
               }
@@ -1020,14 +1020,14 @@
               "ai": {
                 "imageWidth": 501,
                 "imageHeight": 430,
-                "finalScore": 68,
+                "finalScore": 55,
                 "judgement": "ai",
                 "boxes": [
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 100,
-                    "color": "#FF1F1F",
+                    "scorePct": 50,
+                    "color": "#FF9500",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 11,
                     "y1": 6,
@@ -1037,8 +1037,8 @@
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 100,
-                    "color": "#FF1F1F",
+                    "scorePct": 50,
+                    "color": "#FF9500",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 125,
                     "y1": 107,
@@ -1081,13 +1081,13 @@
               "ai": {
                 "imageWidth": 1890,
                 "imageHeight": 1417,
-                "finalScore": 62,
+                "finalScore": 58,
                 "judgement": "ai",
                 "boxes": [
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 100,
+                    "scorePct": 75,
                     "color": "#FF1F1F",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 354,
@@ -1098,7 +1098,7 @@
                   {
                     "label": "CA",
                     "titleKo": "색수차",
-                    "scorePct": 100,
+                    "scorePct": 90,
                     "color": "#FF1F1F",
                     "description": "색수차 없음 (실제 렌즈는 색수차 발생하지만 AI는 광학 왜곡이 없음)",
                     "x1": 0,
@@ -1107,9 +1107,20 @@
                     "y2": 141
                   },
                   {
+                    "label": "TEXT BLUR",
+                    "titleKo": "텍스트 블러",
+                    "scorePct": 10,
+                    "color": "#00E85F",
+                    "description": "텍스트 영역이 비정상적으로 흐릿하거나 깨짐 (AI의 텍스트 표현 한계)",
+                    "x1": 263,
+                    "y1": 55,
+                    "x2": 1361,
+                    "y2": 692
+                  },
+                  {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 3,
+                    "scorePct": 6,
                     "color": "#00E85F",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 472,
@@ -1146,13 +1157,13 @@
               "ai": {
                 "imageWidth": 4032,
                 "imageHeight": 3024,
-                "finalScore": 21,
+                "finalScore": 19,
                 "judgement": "real",
                 "boxes": [
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 84,
+                    "scorePct": 82,
                     "color": "#FF1F1F",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 2141,
@@ -1163,7 +1174,7 @@
                   {
                     "label": "MICRO TEX",
                     "titleKo": "마이크로 텍스처",
-                    "scorePct": 78,
+                    "scorePct": 79,
                     "color": "#FF1F1F",
                     "description": "마이크로 텍스처 부재 (피부결·직물결·종이질감 같은 미세 요소 없음)",
                     "x1": 3492,
@@ -1172,26 +1183,26 @@
                     "y2": 3024
                   },
                   {
-                    "label": "CA FIELD",
-                    "titleKo": "색수차 공간 분포",
-                    "scorePct": 69,
-                    "color": "#FF9500",
-                    "description": "색수차가 공간적으로 균일 (실제 렌즈는 위치마다 색수차 분포 다름)",
-                    "x1": 0,
-                    "y1": 0,
-                    "x2": 4032,
-                    "y2": 302
-                  },
-                  {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 44,
+                    "scorePct": 47,
                     "color": "#00E85F",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 1008,
                     "y1": 756,
                     "x2": 3024,
                     "y2": 2268
+                  },
+                  {
+                    "label": "FG/BG",
+                    "titleKo": "배경/전경 복잡도",
+                    "scorePct": 53,
+                    "color": "#FF9500",
+                    "description": "배경이 전경만큼 선명 (실제 카메라 보케 효과 없음)",
+                    "x1": 0,
+                    "y1": 0,
+                    "x2": 4032,
+                    "y2": 604
                   }
                 ]
               }
@@ -1222,14 +1233,14 @@
               "ai": {
                 "imageWidth": 4032,
                 "imageHeight": 3024,
-                "finalScore": 19,
+                "finalScore": 10,
                 "judgement": "real",
                 "boxes": [
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 100,
-                    "color": "#FF1F1F",
+                    "scorePct": 50,
+                    "color": "#FF9500",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 931,
                     "y1": 0,
@@ -1239,7 +1250,7 @@
                   {
                     "label": "HIGHLIGHT",
                     "titleKo": "반사 하이라이트",
-                    "scorePct": 20,
+                    "scorePct": 10,
                     "color": "#00E85F",
                     "description": "반사 하이라이트가 비정상적으로 원형 (AI의 광원 반사 표현 인위성)",
                     "x1": 463,
@@ -1250,7 +1261,7 @@
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 6,
+                    "scorePct": 3,
                     "color": "#00E85F",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 1008,
@@ -1261,8 +1272,8 @@
                   {
                     "label": "CA FIELD",
                     "titleKo": "색수차 공간 분포",
-                    "scorePct": 85,
-                    "color": "#FF1F1F",
+                    "scorePct": 42,
+                    "color": "#00E85F",
                     "description": "색수차가 공간적으로 균일 (실제 렌즈는 위치마다 색수차 분포 다름)",
                     "x1": 0,
                     "y1": 0,
@@ -1298,14 +1309,14 @@
               "ai": {
                 "imageWidth": 497,
                 "imageHeight": 406,
-                "finalScore": 67,
+                "finalScore": 54,
                 "judgement": "ai",
                 "boxes": [
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 100,
-                    "color": "#FF1F1F",
+                    "scorePct": 50,
+                    "color": "#FF9500",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 235,
                     "y1": 12,
@@ -1315,7 +1326,7 @@
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 27,
+                    "scorePct": 13,
                     "color": "#00E85F",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 124,
@@ -1352,24 +1363,24 @@
               "ai": {
                 "imageWidth": 496,
                 "imageHeight": 459,
-                "finalScore": 62,
+                "finalScore": 59,
                 "judgement": "ai",
                 "boxes": [
                   {
-                    "label": "HALO",
-                    "titleKo": "헤일로 아티팩트",
-                    "scorePct": 100,
+                    "label": "VIGNETTE",
+                    "titleKo": "비네팅",
+                    "scorePct": 95,
                     "color": "#FF1F1F",
-                    "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
-                    "x1": 9,
-                    "y1": 44,
-                    "x2": 489,
-                    "y2": 224
+                    "description": "비네팅 없음 (실제 렌즈는 가장자리가 어두워지는 비네팅이 생김)",
+                    "x1": 0,
+                    "y1": 0,
+                    "x2": 496,
+                    "y2": 114
                   },
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 61,
+                    "scorePct": 55,
                     "color": "#FF9500",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 124,
@@ -1406,14 +1417,14 @@
               "ai": {
                 "imageWidth": 502,
                 "imageHeight": 677,
-                "finalScore": 68,
+                "finalScore": 56,
                 "judgement": "ai",
                 "boxes": [
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 100,
-                    "color": "#FF1F1F",
+                    "scorePct": 50,
+                    "color": "#FF9500",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 332,
                     "y1": 623,
@@ -1423,8 +1434,8 @@
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 100,
-                    "color": "#FF1F1F",
+                    "scorePct": 50,
+                    "color": "#FF9500",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 125,
                     "y1": 169,
@@ -1434,8 +1445,8 @@
                   {
                     "label": "CA",
                     "titleKo": "색수차",
-                    "scorePct": 100,
-                    "color": "#FF1F1F",
+                    "scorePct": 50,
+                    "color": "#FF9500",
                     "description": "색수차 없음 (실제 렌즈는 색수차 발생하지만 AI는 광학 왜곡이 없음)",
                     "x1": 0,
                     "y1": 0,
@@ -1478,7 +1489,7 @@
               "ai": {
                 "imageWidth": 4032,
                 "imageHeight": 3024,
-                "finalScore": 14,
+                "finalScore": 13,
                 "judgement": "real",
                 "boxes": [
                   {
@@ -1506,7 +1517,7 @@
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 36,
+                    "scorePct": 38,
                     "color": "#00E85F",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 3306,
@@ -1554,13 +1565,13 @@
               "ai": {
                 "imageWidth": 5712,
                 "imageHeight": 4284,
-                "finalScore": 8,
+                "finalScore": 9,
                 "judgement": "real",
                 "boxes": [
                   {
                     "label": "FG/BG",
                     "titleKo": "배경/전경 복잡도",
-                    "scorePct": 50,
+                    "scorePct": 70,
                     "color": "#FF9500",
                     "description": "배경이 전경만큼 선명 (실제 카메라 보케 효과 없음)",
                     "x1": 0,
@@ -3102,7 +3113,7 @@
                   {
                     "label": "FG/BG",
                     "titleKo": "배경/전경 복잡도",
-                    "scorePct": 83,
+                    "scorePct": 88,
                     "color": "#FF1F1F",
                     "description": "배경이 전경만큼 선명 (실제 카메라 보케 효과 없음)",
                     "x1": 0,
@@ -3237,20 +3248,9 @@
               "ai": {
                 "imageWidth": 4032,
                 "imageHeight": 3024,
-                "finalScore": 11,
+                "finalScore": 9,
                 "judgement": "real",
                 "boxes": [
-                  {
-                    "label": "CA FIELD",
-                    "titleKo": "색수차 공간 분포",
-                    "scorePct": 81,
-                    "color": "#FF1F1F",
-                    "description": "색수차가 공간적으로 균일 (실제 렌즈는 위치마다 색수차 분포 다름)",
-                    "x1": 0,
-                    "y1": 0,
-                    "x2": 4032,
-                    "y2": 302
-                  },
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
@@ -3261,6 +3261,17 @@
                     "y1": 120,
                     "x2": 3238,
                     "y2": 1097
+                  },
+                  {
+                    "label": "CA FIELD",
+                    "titleKo": "색수차 공간 분포",
+                    "scorePct": 66,
+                    "color": "#FF9500",
+                    "description": "색수차가 공간적으로 균일 (실제 렌즈는 위치마다 색수차 분포 다름)",
+                    "x1": 0,
+                    "y1": 0,
+                    "x2": 4032,
+                    "y2": 302
                   },
                   {
                     "label": "DEPTH",
@@ -3378,13 +3389,13 @@
               "ai": {
                 "imageWidth": 3032,
                 "imageHeight": 1824,
-                "finalScore": 48,
-                "judgement": "real",
+                "finalScore": 50,
+                "judgement": "ai",
                 "boxes": [
                   {
                     "label": "FG/BG",
                     "titleKo": "배경/전경 복잡도",
-                    "scorePct": 79,
+                    "scorePct": 89,
                     "color": "#FF1F1F",
                     "description": "배경이 전경만큼 선명 (실제 카메라 보케 효과 없음)",
                     "x1": 0,
@@ -3395,7 +3406,7 @@
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 28,
+                    "scorePct": 38,
                     "color": "#00E85F",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 514,
@@ -3406,7 +3417,7 @@
                   {
                     "label": "HIGHLIGHT",
                     "titleKo": "반사 하이라이트",
-                    "scorePct": 27,
+                    "scorePct": 32,
                     "color": "#00E85F",
                     "description": "반사 하이라이트가 비정상적으로 원형 (AI의 광원 반사 표현 인위성)",
                     "x1": 1654,
@@ -4390,8 +4401,8 @@
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 75,
-                    "color": "#FF1F1F",
+                    "scorePct": 55,
+                    "color": "#FF9500",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 1008,
                     "y1": 756,
@@ -4399,20 +4410,20 @@
                     "y2": 2268
                   },
                   {
-                    "label": "FG/BG",
-                    "titleKo": "배경/전경 복잡도",
-                    "scorePct": 55,
-                    "color": "#FF9500",
-                    "description": "배경이 전경만큼 선명 (실제 카메라 보케 효과 없음)",
+                    "label": "CA FIELD",
+                    "titleKo": "색수차 공간 분포",
+                    "scorePct": 44,
+                    "color": "#00E85F",
+                    "description": "색수차가 공간적으로 균일 (실제 렌즈는 위치마다 색수차 분포 다름)",
                     "x1": 0,
                     "y1": 0,
                     "x2": 4032,
-                    "y2": 604
+                    "y2": 302
                   },
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 34,
+                    "scorePct": 29,
                     "color": "#00E85F",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 1973,
@@ -4449,14 +4460,14 @@
               "ai": {
                 "imageWidth": 4032,
                 "imageHeight": 3024,
-                "finalScore": 20,
+                "finalScore": 9,
                 "judgement": "real",
                 "boxes": [
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 100,
-                    "color": "#FF1F1F",
+                    "scorePct": 50,
+                    "color": "#FF9500",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 944,
                     "y1": 198,
@@ -4466,8 +4477,8 @@
                   {
                     "label": "VIGNETTE",
                     "titleKo": "비네팅",
-                    "scorePct": 100,
-                    "color": "#FF1F1F",
+                    "scorePct": 50,
+                    "color": "#FF9500",
                     "description": "비네팅 없음 (실제 렌즈는 가장자리가 어두워지는 비네팅이 생김)",
                     "x1": 0,
                     "y1": 0,
@@ -4644,14 +4655,14 @@
               "ai": {
                 "imageWidth": 3508,
                 "imageHeight": 4961,
-                "finalScore": 22,
+                "finalScore": 20,
                 "judgement": "real",
                 "boxes": [
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 60,
-                    "color": "#FF9500",
+                    "scorePct": 80,
+                    "color": "#FF1F1F",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 877,
                     "y1": 1240,
@@ -4659,15 +4670,15 @@
                     "y2": 3720
                   },
                   {
-                    "label": "CA FIELD",
-                    "titleKo": "색수차 공간 분포",
-                    "scorePct": 73,
-                    "color": "#FF9500",
-                    "description": "색수차가 공간적으로 균일 (실제 렌즈는 위치마다 색수차 분포 다름)",
+                    "label": "VIGNETTE",
+                    "titleKo": "비네팅",
+                    "scorePct": 85,
+                    "color": "#FF1F1F",
+                    "description": "비네팅 없음 (실제 렌즈는 가장자리가 어두워지는 비네팅이 생김)",
                     "x1": 0,
                     "y1": 0,
                     "x2": 3508,
-                    "y2": 350
+                    "y2": 877
                   }
                 ]
               }
@@ -4763,14 +4774,14 @@
               "ai": {
                 "imageWidth": 5712,
                 "imageHeight": 4284,
-                "finalScore": 15,
+                "finalScore": 12,
                 "judgement": "real",
                 "boxes": [
                   {
                     "label": "MICRO TEX",
                     "titleKo": "마이크로 텍스처",
-                    "scorePct": 89,
-                    "color": "#FF1F1F",
+                    "scorePct": 59,
+                    "color": "#FF9500",
                     "description": "마이크로 텍스처 부재 (피부결·직물결·종이질감 같은 미세 요소 없음)",
                     "x1": 1456,
                     "y1": 992,
@@ -4780,8 +4791,8 @@
                   {
                     "label": "CA FIELD",
                     "titleKo": "색수차 공간 분포",
-                    "scorePct": 98,
-                    "color": "#FF1F1F",
+                    "scorePct": 63,
+                    "color": "#FF9500",
                     "description": "색수차가 공간적으로 균일 (실제 렌즈는 위치마다 색수차 분포 다름)",
                     "x1": 0,
                     "y1": 0,
@@ -4791,7 +4802,7 @@
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 39,
+                    "scorePct": 29,
                     "color": "#00E85F",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 1995,
@@ -4958,14 +4969,14 @@
               "ai": {
                 "imageWidth": 5712,
                 "imageHeight": 4284,
-                "finalScore": 14,
+                "finalScore": 8,
                 "judgement": "real",
                 "boxes": [
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 100,
-                    "color": "#FF1F1F",
+                    "scorePct": 50,
+                    "color": "#FF9500",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 1428,
                     "y1": 1071,
@@ -4975,8 +4986,8 @@
                   {
                     "label": "CA FIELD",
                     "titleKo": "색수차 공간 분포",
-                    "scorePct": 80,
-                    "color": "#FF1F1F",
+                    "scorePct": 40,
+                    "color": "#00E85F",
                     "description": "색수차가 공간적으로 균일 (실제 렌즈는 위치마다 색수차 분포 다름)",
                     "x1": 0,
                     "y1": 0,
@@ -4997,7 +5008,7 @@
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 42,
+                    "scorePct": 22,
                     "color": "#00E85F",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 1649,
@@ -5583,25 +5594,14 @@
               "ai": {
                 "imageWidth": 4032,
                 "imageHeight": 3024,
-                "finalScore": 13,
+                "finalScore": 8,
                 "judgement": "real",
                 "boxes": [
                   {
-                    "label": "CA FIELD",
-                    "titleKo": "색수차 공간 분포",
-                    "scorePct": 83,
-                    "color": "#FF1F1F",
-                    "description": "색수차가 공간적으로 균일 (실제 렌즈는 위치마다 색수차 분포 다름)",
-                    "x1": 0,
-                    "y1": 0,
-                    "x2": 4032,
-                    "y2": 302
-                  },
-                  {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 61,
-                    "color": "#FF9500",
+                    "scorePct": 41,
+                    "color": "#00E85F",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 1008,
                     "y1": 756,
@@ -5609,15 +5609,15 @@
                     "y2": 2268
                   },
                   {
-                    "label": "HALO",
-                    "titleKo": "헤일로 아티팩트",
-                    "scorePct": 33,
-                    "color": "#00E85F",
-                    "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
-                    "x1": 322,
+                    "label": "VIGNETTE",
+                    "titleKo": "비네팅",
+                    "scorePct": 51,
+                    "color": "#FF9500",
+                    "description": "비네팅 없음 (실제 렌즈는 가장자리가 어두워지는 비네팅이 생김)",
+                    "x1": 0,
                     "y1": 0,
-                    "x2": 877,
-                    "y2": 693
+                    "x2": 4032,
+                    "y2": 756
                   }
                 ]
               }
@@ -5648,24 +5648,13 @@
               "ai": {
                 "imageWidth": 4032,
                 "imageHeight": 3024,
-                "finalScore": 11,
+                "finalScore": 16,
                 "judgement": "real",
                 "boxes": [
                   {
-                    "label": "HALO",
-                    "titleKo": "헤일로 아티팩트",
-                    "scorePct": 81,
-                    "color": "#FF1F1F",
-                    "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
-                    "x1": 1621,
-                    "y1": 734,
-                    "x2": 2703,
-                    "y2": 1997
-                  },
-                  {
                     "label": "FG/BG",
                     "titleKo": "배경/전경 복잡도",
-                    "scorePct": 95,
+                    "scorePct": 100,
                     "color": "#FF1F1F",
                     "description": "배경이 전경만큼 선명 (실제 카메라 보케 효과 없음)",
                     "x1": 0,
@@ -5674,9 +5663,20 @@
                     "y2": 604
                   },
                   {
+                    "label": "HALO",
+                    "titleKo": "헤일로 아티팩트",
+                    "scorePct": 82,
+                    "color": "#FF1F1F",
+                    "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
+                    "x1": 1621,
+                    "y1": 734,
+                    "x2": 2703,
+                    "y2": 1997
+                  },
+                  {
                     "label": "MICRO TEX",
                     "titleKo": "마이크로 텍스처",
-                    "scorePct": 82,
+                    "scorePct": 85,
                     "color": "#FF1F1F",
                     "description": "마이크로 텍스처 부재 (피부결·직물결·종이질감 같은 미세 요소 없음)",
                     "x1": 2358,
@@ -5854,14 +5854,14 @@
               "ai": {
                 "imageWidth": 5712,
                 "imageHeight": 4284,
-                "finalScore": 10,
+                "finalScore": 8,
                 "judgement": "real",
                 "boxes": [
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 59,
-                    "color": "#FF9500",
+                    "scorePct": 49,
+                    "color": "#00E85F",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 1428,
                     "y1": 1071,
@@ -5871,7 +5871,7 @@
                   {
                     "label": "MICRO TEX",
                     "titleKo": "마이크로 텍스처",
-                    "scorePct": 65,
+                    "scorePct": 50,
                     "color": "#FF9500",
                     "description": "마이크로 텍스처 부재 (피부결·직물결·종이질감 같은 미세 요소 없음)",
                     "x1": 4704,
@@ -6201,14 +6201,14 @@
               "ai": {
                 "imageWidth": 5712,
                 "imageHeight": 4284,
-                "finalScore": 16,
+                "finalScore": 9,
                 "judgement": "real",
                 "boxes": [
                   {
                     "label": "VIGNETTE",
                     "titleKo": "비네팅",
-                    "scorePct": 100,
-                    "color": "#FF1F1F",
+                    "scorePct": 60,
+                    "color": "#FF9500",
                     "description": "비네팅 없음 (실제 렌즈는 가장자리가 어두워지는 비네팅이 생김)",
                     "x1": 0,
                     "y1": 0,
@@ -6218,8 +6218,8 @@
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 69,
-                    "color": "#FF9500",
+                    "scorePct": 39,
+                    "color": "#00E85F",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 1428,
                     "y1": 1071,
@@ -6229,7 +6229,7 @@
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 49,
+                    "scorePct": 29,
                     "color": "#00E85F",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 277,
@@ -6717,30 +6717,30 @@
               "ai": {
                 "imageWidth": 5712,
                 "imageHeight": 4284,
-                "finalScore": 15,
+                "finalScore": 11,
                 "judgement": "real",
                 "boxes": [
                   {
-                    "label": "FG/BG",
-                    "titleKo": "배경/전경 복잡도",
-                    "scorePct": 100,
-                    "color": "#FF1F1F",
-                    "description": "배경이 전경만큼 선명 (실제 카메라 보케 효과 없음)",
-                    "x1": 0,
-                    "y1": 0,
-                    "x2": 5712,
-                    "y2": 856
-                  },
-                  {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 77,
-                    "color": "#FF1F1F",
+                    "scorePct": 53,
+                    "color": "#FF9500",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 1428,
                     "y1": 1071,
                     "x2": 4284,
                     "y2": 3213
+                  },
+                  {
+                    "label": "FG/BG",
+                    "titleKo": "배경/전경 복잡도",
+                    "scorePct": 65,
+                    "color": "#FF9500",
+                    "description": "배경이 전경만큼 선명 (실제 카메라 보케 효과 없음)",
+                    "x1": 0,
+                    "y1": 0,
+                    "x2": 5712,
+                    "y2": 856
                   },
                   {
                     "label": "HIGHLIGHT",
@@ -6955,13 +6955,13 @@
               "ai": {
                 "imageWidth": 5712,
                 "imageHeight": 4284,
-                "finalScore": 16,
+                "finalScore": 14,
                 "judgement": "real",
                 "boxes": [
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 97,
+                    "scorePct": 93,
                     "color": "#FF1F1F",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 1428,
@@ -6983,7 +6983,7 @@
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 36,
+                    "scorePct": 38,
                     "color": "#00E85F",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 1675,
@@ -6994,7 +6994,7 @@
                   {
                     "label": "MICRO TEX",
                     "titleKo": "마이크로 텍스처",
-                    "scorePct": 91,
+                    "scorePct": 90,
                     "color": "#FF1F1F",
                     "description": "마이크로 텍스처 부재 (피부결·직물결·종이질감 같은 미세 요소 없음)",
                     "x1": 2142,
@@ -7226,13 +7226,13 @@
               "ai": {
                 "imageWidth": 1206,
                 "imageHeight": 2622,
-                "finalScore": 54,
+                "finalScore": 56,
                 "judgement": "ai",
                 "boxes": [
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 50,
+                    "scorePct": 55,
                     "color": "#FF9500",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 395,
@@ -7243,7 +7243,7 @@
                   {
                     "label": "CA",
                     "titleKo": "색수차",
-                    "scorePct": 50,
+                    "scorePct": 55,
                     "color": "#FF9500",
                     "description": "색수차 없음 (실제 렌즈는 색수차 발생하지만 AI는 광학 왜곡이 없음)",
                     "x1": 0,
@@ -7254,7 +7254,7 @@
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 24,
+                    "scorePct": 29,
                     "color": "#00E85F",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 301,
@@ -7515,13 +7515,13 @@
               "ai": {
                 "imageWidth": 5712,
                 "imageHeight": 4284,
-                "finalScore": 12,
+                "finalScore": 13,
                 "judgement": "real",
                 "boxes": [
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 90,
+                    "scorePct": 100,
                     "color": "#FF1F1F",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 1428,
@@ -7530,15 +7530,15 @@
                     "y2": 3213
                   },
                   {
-                    "label": "FG/BG",
-                    "titleKo": "배경/전경 복잡도",
-                    "scorePct": 95,
+                    "label": "VIGNETTE",
+                    "titleKo": "비네팅",
+                    "scorePct": 100,
                     "color": "#FF1F1F",
-                    "description": "배경이 전경만큼 선명 (실제 카메라 보케 효과 없음)",
+                    "description": "비네팅 없음 (실제 렌즈는 가장자리가 어두워지는 비네팅이 생김)",
                     "x1": 0,
                     "y1": 0,
                     "x2": 5712,
-                    "y2": 856
+                    "y2": 1071
                   },
                   {
                     "label": "HALO",
@@ -7561,17 +7561,6 @@
                     "y1": 2626,
                     "x2": 751,
                     "y2": 2632
-                  },
-                  {
-                    "label": "MICRO TEX",
-                    "titleKo": "마이크로 텍스처",
-                    "scorePct": 72,
-                    "color": "#FF9500",
-                    "description": "마이크로 텍스처 부재 (피부결·직물결·종이질감 같은 미세 요소 없음)",
-                    "x1": 3569,
-                    "y1": 304,
-                    "x2": 4662,
-                    "y2": 1224
                   }
                 ]
               }
@@ -7602,13 +7591,13 @@
               "ai": {
                 "imageWidth": 4032,
                 "imageHeight": 3024,
-                "finalScore": 10,
+                "finalScore": 7,
                 "judgement": "real",
                 "boxes": [
                   {
                     "label": "FG/BG",
                     "titleKo": "배경/전경 복잡도",
-                    "scorePct": 60,
+                    "scorePct": 50,
                     "color": "#FF9500",
                     "description": "배경이 전경만큼 선명 (실제 카메라 보케 효과 없음)",
                     "x1": 0,
@@ -7619,7 +7608,7 @@
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 34,
+                    "scorePct": 29,
                     "color": "#00E85F",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 2182,
@@ -7630,7 +7619,7 @@
                   {
                     "label": "HIGHLIGHT",
                     "titleKo": "반사 하이라이트",
-                    "scorePct": 2,
+                    "scorePct": 0,
                     "color": "#00E85F",
                     "description": "반사 하이라이트가 비정상적으로 원형 (AI의 광원 반사 표현 인위성)",
                     "x1": 1654,
@@ -7667,14 +7656,14 @@
               "ai": {
                 "imageWidth": 4032,
                 "imageHeight": 3024,
-                "finalScore": 15,
+                "finalScore": 8,
                 "judgement": "real",
                 "boxes": [
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 93,
-                    "color": "#FF1F1F",
+                    "scorePct": 51,
+                    "color": "#FF9500",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 1008,
                     "y1": 756,
@@ -7684,8 +7673,8 @@
                   {
                     "label": "FG/BG",
                     "titleKo": "배경/전경 복잡도",
-                    "scorePct": 100,
-                    "color": "#FF1F1F",
+                    "scorePct": 55,
+                    "color": "#FF9500",
                     "description": "배경이 전경만큼 선명 (실제 카메라 보케 효과 없음)",
                     "x1": 0,
                     "y1": 0,
@@ -7786,13 +7775,13 @@
               "ai": {
                 "imageWidth": 1063,
                 "imageHeight": 1063,
-                "finalScore": 24,
+                "finalScore": 22,
                 "judgement": "real",
                 "boxes": [
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 55,
+                    "scorePct": 50,
                     "color": "#FF9500",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 567,
@@ -7803,7 +7792,7 @@
                   {
                     "label": "VIGNETTE",
                     "titleKo": "비네팅",
-                    "scorePct": 55,
+                    "scorePct": 50,
                     "color": "#FF9500",
                     "description": "비네팅 없음 (실제 렌즈는 가장자리가 어두워지는 비네팅이 생김)",
                     "x1": 0,
@@ -7814,7 +7803,7 @@
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 5,
+                    "scorePct": 0,
                     "color": "#00E85F",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 265,
@@ -7992,7 +7981,7 @@
               "ai": {
                 "imageWidth": 5712,
                 "imageHeight": 4284,
-                "finalScore": 16,
+                "finalScore": 18,
                 "judgement": "real",
                 "boxes": [
                   {
@@ -9387,14 +9376,14 @@
               "ai": {
                 "imageWidth": 5712,
                 "imageHeight": 4284,
-                "finalScore": 12,
+                "finalScore": 8,
                 "judgement": "real",
                 "boxes": [
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 83,
-                    "color": "#FF1F1F",
+                    "scorePct": 58,
+                    "color": "#FF9500",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 1428,
                     "y1": 1071,
@@ -9402,37 +9391,26 @@
                     "y2": 3213
                   },
                   {
-                    "label": "CA FIELD",
-                    "titleKo": "색수차 공간 분포",
-                    "scorePct": 69,
-                    "color": "#FF9500",
-                    "description": "색수차가 공간적으로 균일 (실제 렌즈는 위치마다 색수차 분포 다름)",
+                    "label": "FG/BG",
+                    "titleKo": "배경/전경 복잡도",
+                    "scorePct": 43,
+                    "color": "#00E85F",
+                    "description": "배경이 전경만큼 선명 (실제 카메라 보케 효과 없음)",
                     "x1": 0,
                     "y1": 0,
                     "x2": 5712,
-                    "y2": 428
+                    "y2": 856
                   },
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 31,
+                    "scorePct": 21,
                     "color": "#00E85F",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 3483,
                     "y1": 555,
                     "x2": 4837,
                     "y2": 1348
-                  },
-                  {
-                    "label": "HIGHLIGHT",
-                    "titleKo": "반사 하이라이트",
-                    "scorePct": 0,
-                    "color": "#00E85F",
-                    "description": "반사 하이라이트가 비정상적으로 원형 (AI의 광원 반사 표현 인위성)",
-                    "x1": 2109,
-                    "y1": 630,
-                    "x2": 2117,
-                    "y2": 640
                   }
                 ]
               }
@@ -9463,14 +9441,14 @@
               "ai": {
                 "imageWidth": 5712,
                 "imageHeight": 4284,
-                "finalScore": 12,
+                "finalScore": 7,
                 "judgement": "real",
                 "boxes": [
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 100,
-                    "color": "#FF1F1F",
+                    "scorePct": 55,
+                    "color": "#FF9500",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 1428,
                     "y1": 1071,
@@ -9480,8 +9458,8 @@
                   {
                     "label": "VIGNETTE",
                     "titleKo": "비네팅",
-                    "scorePct": 95,
-                    "color": "#FF1F1F",
+                    "scorePct": 60,
+                    "color": "#FF9500",
                     "description": "비네팅 없음 (실제 렌즈는 가장자리가 어두워지는 비네팅이 생김)",
                     "x1": 0,
                     "y1": 0,
@@ -9491,7 +9469,7 @@
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 47,
+                    "scorePct": 27,
                     "color": "#00E85F",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 0,
@@ -10483,14 +10461,14 @@
               "ai": {
                 "imageWidth": 4032,
                 "imageHeight": 3024,
-                "finalScore": 15,
+                "finalScore": 8,
                 "judgement": "real",
                 "boxes": [
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 100,
-                    "color": "#FF1F1F",
+                    "scorePct": 70,
+                    "color": "#FF9500",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 1172,
                     "y1": 1353,
@@ -10500,7 +10478,7 @@
                   {
                     "label": "VIGNETTE",
                     "titleKo": "비네팅",
-                    "scorePct": 100,
+                    "scorePct": 75,
                     "color": "#FF1F1F",
                     "description": "비네팅 없음 (실제 렌즈는 가장자리가 어두워지는 비네팅이 생김)",
                     "x1": 0,
@@ -10728,24 +10706,13 @@
               "ai": {
                 "imageWidth": 1668,
                 "imageHeight": 2157,
-                "finalScore": 26,
+                "finalScore": 25,
                 "judgement": "real",
                 "boxes": [
                   {
-                    "label": "VIGNETTE",
-                    "titleKo": "비네팅",
-                    "scorePct": 92,
-                    "color": "#FF1F1F",
-                    "description": "비네팅 없음 (실제 렌즈는 가장자리가 어두워지는 비네팅이 생김)",
-                    "x1": 0,
-                    "y1": 0,
-                    "x2": 1668,
-                    "y2": 417
-                  },
-                  {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 71,
+                    "scorePct": 51,
                     "color": "#FF9500",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 46,
@@ -10754,9 +10721,20 @@
                     "y2": 2028
                   },
                   {
+                    "label": "VIGNETTE",
+                    "titleKo": "비네팅",
+                    "scorePct": 62,
+                    "color": "#FF9500",
+                    "description": "비네팅 없음 (실제 렌즈는 가장자리가 어두워지는 비네팅이 생김)",
+                    "x1": 0,
+                    "y1": 0,
+                    "x2": 1668,
+                    "y2": 417
+                  },
+                  {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 28,
+                    "scorePct": 24,
                     "color": "#00E85F",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 417,
@@ -11548,14 +11526,14 @@
               "ai": {
                 "imageWidth": 3024,
                 "imageHeight": 4032,
-                "finalScore": 16,
+                "finalScore": 36,
                 "judgement": "real",
                 "boxes": [
                   {
                     "label": "VIGNETTE",
                     "titleKo": "비네팅",
-                    "scorePct": 100,
-                    "color": "#FF1F1F",
+                    "scorePct": 50,
+                    "color": "#FF9500",
                     "description": "비네팅 없음 (실제 렌즈는 가장자리가 어두워지는 비네팅이 생김)",
                     "x1": 0,
                     "y1": 0,
@@ -11565,8 +11543,8 @@
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 60,
-                    "color": "#FF9500",
+                    "scorePct": 30,
+                    "color": "#00E85F",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 756,
                     "y1": 1008,
@@ -11602,14 +11580,14 @@
               "ai": {
                 "imageWidth": 4032,
                 "imageHeight": 3024,
-                "finalScore": 9,
+                "finalScore": 10,
                 "judgement": "real",
                 "boxes": [
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 41,
-                    "color": "#00E85F",
+                    "scorePct": 51,
+                    "color": "#FF9500",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 1008,
                     "y1": 756,
@@ -11868,7 +11846,7 @@
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 50,
+                    "scorePct": 51,
                     "color": "#FF9500",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 1008,
@@ -11879,7 +11857,7 @@
                   {
                     "label": "CA FIELD",
                     "titleKo": "색수차 공간 분포",
-                    "scorePct": 62,
+                    "scorePct": 65,
                     "color": "#FF9500",
                     "description": "색수차가 공간적으로 균일 (실제 렌즈는 위치마다 색수차 분포 다름)",
                     "x1": 0,
@@ -11890,7 +11868,7 @@
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 31,
+                    "scorePct": 32,
                     "color": "#00E85F",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 3408,
@@ -13034,14 +13012,14 @@
               "ai": {
                 "imageWidth": 5712,
                 "imageHeight": 4284,
-                "finalScore": 11,
+                "finalScore": 5,
                 "judgement": "real",
                 "boxes": [
                   {
                     "label": "MICRO TEX",
                     "titleKo": "마이크로 텍스처",
-                    "scorePct": 82,
-                    "color": "#FF1F1F",
+                    "scorePct": 42,
+                    "color": "#00E85F",
                     "description": "마이크로 텍스처 부재 (피부결·직물결·종이질감 같은 미세 요소 없음)",
                     "x1": 2268,
                     "y1": 1498,
@@ -13051,8 +13029,8 @@
                   {
                     "label": "FG/BG",
                     "titleKo": "배경/전경 복잡도",
-                    "scorePct": 98,
-                    "color": "#FF1F1F",
+                    "scorePct": 48,
+                    "color": "#00E85F",
                     "description": "배경이 전경만큼 선명 (실제 카메라 보케 효과 없음)",
                     "x1": 0,
                     "y1": 0,
@@ -13062,8 +13040,8 @@
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 51,
-                    "color": "#FF9500",
+                    "scorePct": 26,
+                    "color": "#00E85F",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 2624,
                     "y1": 2825,
@@ -13316,14 +13294,14 @@
               "ai": {
                 "imageWidth": 5712,
                 "imageHeight": 4284,
-                "finalScore": 12,
+                "finalScore": 9,
                 "judgement": "real",
                 "boxes": [
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 93,
-                    "color": "#FF1F1F",
+                    "scorePct": 73,
+                    "color": "#FF9500",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 1321,
                     "y1": 668,
@@ -13331,42 +13309,20 @@
                     "y2": 3528
                   },
                   {
-                    "label": "MICRO TEX",
-                    "titleKo": "마이크로 텍스처",
-                    "scorePct": 83,
+                    "label": "FG/BG",
+                    "titleKo": "배경/전경 복잡도",
+                    "scorePct": 75,
                     "color": "#FF1F1F",
-                    "description": "마이크로 텍스처 부재 (피부결·직물결·종이질감 같은 미세 요소 없음)",
-                    "x1": 4720,
-                    "y1": 0,
-                    "x2": 5508,
-                    "y2": 888
-                  },
-                  {
-                    "label": "CA",
-                    "titleKo": "색수차",
-                    "scorePct": 36,
-                    "color": "#00E85F",
-                    "description": "색수차 없음 (실제 렌즈는 색수차 발생하지만 AI는 광학 왜곡이 없음)",
+                    "description": "배경이 전경만큼 선명 (실제 카메라 보케 효과 없음)",
                     "x1": 0,
                     "y1": 0,
                     "x2": 5712,
-                    "y2": 428
-                  },
-                  {
-                    "label": "HIGHLIGHT",
-                    "titleKo": "반사 하이라이트",
-                    "scorePct": 0,
-                    "color": "#00E85F",
-                    "description": "반사 하이라이트가 비정상적으로 원형 (AI의 광원 반사 표현 인위성)",
-                    "x1": 4690,
-                    "y1": 741,
-                    "x2": 4697,
-                    "y2": 747
+                    "y2": 856
                   },
                   {
                     "label": "DEPTH",
                     "titleKo": "깊이감 일관성",
-                    "scorePct": 5,
+                    "scorePct": 0,
                     "color": "#00E85F",
                     "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
                     "x1": 1428,
@@ -13403,7 +13359,7 @@
               "ai": {
                 "imageWidth": 5712,
                 "imageHeight": 4284,
-                "finalScore": 15,
+                "finalScore": 16,
                 "judgement": "real",
                 "boxes": [
                   {
@@ -13431,7 +13387,7 @@
                   {
                     "label": "HALO",
                     "titleKo": "헤일로 아티팩트",
-                    "scorePct": 39,
+                    "scorePct": 38,
                     "color": "#00E85F",
                     "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
                     "x1": 3961,
