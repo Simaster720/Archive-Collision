@@ -7295,7 +7295,47 @@
                 "publicId": "archive-collision/S1/SS14/S1_SS14_01",
                 "ext": "png"
               },
-              "ai": null
+              "ai": {
+                "imageWidth": 500,
+                "imageHeight": 746,
+                "finalScore": 59,
+                "judgement": "ai",
+                "boxes": [
+                  {
+                    "label": "HALO",
+                    "titleKo": "헤일로 아티팩트",
+                    "scorePct": 75,
+                    "color": "#FF1F1F",
+                    "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
+                    "x1": 3,
+                    "y1": 490,
+                    "x2": 484,
+                    "y2": 652
+                  },
+                  {
+                    "label": "DEPTH",
+                    "titleKo": "깊이감 일관성",
+                    "scorePct": 59,
+                    "color": "#FF9500",
+                    "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
+                    "x1": 125,
+                    "y1": 186,
+                    "x2": 375,
+                    "y2": 559
+                  },
+                  {
+                    "label": "PORE TEX",
+                    "titleKo": "피부 모공 텍스처",
+                    "scorePct": 15,
+                    "color": "#00E85F",
+                    "description": "피부 모공·주름 등 미세 질감 없음 (AI가 만든 매끈한 피부)",
+                    "x1": 164,
+                    "y1": 148,
+                    "x2": 238,
+                    "y2": 243
+                  }
+                ]
+              }
             },
             {
               "id": "S1_SS14_02",
@@ -7320,7 +7360,58 @@
                 "publicId": "archive-collision/S1/SS14/S1_SS14_02",
                 "ext": "png"
               },
-              "ai": null
+              "ai": {
+                "imageWidth": 711,
+                "imageHeight": 395,
+                "finalScore": 57,
+                "judgement": "ai",
+                "boxes": [
+                  {
+                    "label": "HALO",
+                    "titleKo": "헤일로 아티팩트",
+                    "scorePct": 80,
+                    "color": "#FF1F1F",
+                    "description": "헤일로 아티팩트 발견 (과도한 샤프닝 후처리로 생기는 경계 후광)",
+                    "x1": 499,
+                    "y1": 227,
+                    "x2": 656,
+                    "y2": 360
+                  },
+                  {
+                    "label": "DEPTH",
+                    "titleKo": "깊이감 일관성",
+                    "scorePct": 80,
+                    "color": "#FF1F1F",
+                    "description": "피사계심도 부재 (전체 이미지가 균등하게 선명, 실제 사진은 배경 흐림)",
+                    "x1": 177,
+                    "y1": 98,
+                    "x2": 533,
+                    "y2": 296
+                  },
+                  {
+                    "label": "FG/BG",
+                    "titleKo": "배경/전경 복잡도",
+                    "scorePct": 72,
+                    "color": "#FF9500",
+                    "description": "배경이 전경만큼 선명 (실제 카메라 보케 효과 없음)",
+                    "x1": 0,
+                    "y1": 0,
+                    "x2": 711,
+                    "y2": 79
+                  },
+                  {
+                    "label": "PORE TEX",
+                    "titleKo": "피부 모공 텍스처",
+                    "scorePct": 33,
+                    "color": "#00E85F",
+                    "description": "피부 모공·주름 등 미세 질감 없음 (AI가 만든 매끈한 피부)",
+                    "x1": 436,
+                    "y1": 5,
+                    "x2": 595,
+                    "y2": 169
+                  }
+                ]
+              }
             }
           ]
         }
